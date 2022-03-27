@@ -1,4 +1,5 @@
 ﻿using Leetcode.SampleEntities;
+using Leetcode6;
 using PriorityQueueFromCodeProject;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,11 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            AmazonOA amazonOA = new AmazonOA();
-            var result = amazonOA.findTotalImbalance(new List<int> { 4, 1, 3, 2 });
+            LongestHappyStringLC1405 longestHappyStringLC1405 = new LongestHappyStringLC1405();
+            Console.WriteLine(longestHappyStringLC1405.LongestDiverseString(1, 1, 7));
+
+            //AmazonOA amazonOA = new AmazonOA();
+            //var result = amazonOA.findTotalImbalance(new List<int> { 4, 1, 3, 2 });
 
 
             //NQueensILC51 nQueensILC51 = new NQueensILC51();
