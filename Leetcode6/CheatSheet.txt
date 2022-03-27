@@ -126,6 +126,12 @@ Cheatsheet
 		for (int k=(nums.Length * 2) - 1; k>=0; k--) {
             int i = k % nums.Length;
 
+11. Heap / PriorityQueue
+	In both the below cases, you would have a priorityQueue with <char,priority(int)> with CustomComparer.
+	You dequeue the char and condtionally reinsert to char to queue with (priority-1).
+		a. ReorganizeStringLC767
+		b. LongestHappyStringLC1405
+
 
 
 

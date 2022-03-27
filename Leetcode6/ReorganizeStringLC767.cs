@@ -1,70 +1,55 @@
 ﻿using System.Text;
 
+// #PriorityQueue #Heap #.NET6
+// Inspired from #Kevin Naughton Jr
+
 namespace Leetcode
 {
     public class ReorganizeStringLC767
     {
-        public string ReorganizeString(string S)
+        public string ReorganizeString(string s)
         {
-            char[] arr = S.ToCharArray();
-            Dictionary<char, int> counts = new Dictionary<char, int>();
-            for (int i = 0; i < arr.Length; i++)
+            Dictionary<char, int> charFreq = new Dictionary<char, int>();
+            for (int i = 0; i < s.Length; i++)
             {
-                if (!counts.ContainsKey(arr[i]))
-                    counts.Add(arr[i], 1);
+                if (charFreq.ContainsKey(s[i]))
+                    charFreq[s[i]] = charFreq[s[i]] + 1;
                 else
-                    counts[arr[i]] = counts[arr[i]] + 1;
-            }
-            CountsComparer countsComparer = new CountsComparer(counts);
-            List<KeyValuePair<char, char>> data = new List<KeyValuePair<char, char>>();
-            foreach (var item in counts)
-            {
-                data.Add(new KeyValuePair<char, char>(item.Key, item.Key));
-            }
-            PriorityQueueFromCodeProject.PriorityQueue<char, char> maxHeap = new PriorityQueueFromCodeProject.PriorityQueue<char, char>(data, countsComparer);
-
-            StringBuilder result = new StringBuilder();
-            while (maxHeap.Count > 1)
-            {
-                char current = maxHeap.DequeueValue();
-                char next = maxHeap.DequeueValue();
-                result.Append(current);
-                result.Append(next);
-
-                counts[current] = counts[current] - 1;
-                counts[next] = counts[next] - 1;
-
-                if (counts[current] > 0)
-                    maxHeap.Enqueue(current, current);
-
-                if (counts[next] > 0)
-                    maxHeap.Enqueue(next, next);
+                    charFreq.Add(s[i], 1);
             }
 
-            if (!maxHeap.IsEmpty)
+            PriorityQueue<char, int> queue = new PriorityQueue<char, int>(new PriorityComparer()); //Custom comparer for MAXHEAP. Default is MINHEAP.
+            foreach (var item in charFreq)
+                queue.Enqueue(item.Key, item.Value);
+
+            StringBuilder sb = new StringBuilder();
+            while (queue.Count > 1) //so long you have 2 distinct chars
             {
-                char last = maxHeap.DequeueValue();
-                if (counts[last] > 1)
+                queue.TryDequeue(out char curr, out int currCount);
+                queue.TryDequeue(out char next, out int nextCount);
+                sb.Append(curr);
+                sb.Append(next);
+                if (currCount - 1 != 0)
+                    queue.Enqueue(curr, currCount - 1);
+                if (nextCount - 1 != 0)
+                    queue.Enqueue(next, nextCount - 1);
+            }
+            if (queue.Count == 1)
+            {
+                queue.TryDequeue(out char last, out int lastCount);
+                if (lastCount > 1)
                     return "";
-                result.Append(last);
+                sb.Append(last);
             }
-
-            return result.ToString();
+            return sb.ToString();
         }
-
-        public class CountsComparer : IComparer<char>
+        public class PriorityComparer : IComparer<int>
         {
-            Dictionary<char, int> counts;
-            public CountsComparer(Dictionary<char, int> counts)
+            public int Compare(int p1, int p2)
             {
-                this.counts = counts;
-            }
-            public int Compare(char x, char y)
-            {
-                return counts[y] - counts[x];
+                return p2.CompareTo(p1);
             }
         }
-
     }
 
 }
