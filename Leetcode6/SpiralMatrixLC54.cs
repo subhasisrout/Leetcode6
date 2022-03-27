@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-// #AE
+﻿// #AE
 namespace Leetcode
 {
     public class SpiralMatrixLC54
@@ -43,6 +42,6 @@ namespace Leetcode
             }
             return result;
         }
-    
+
     }
 }

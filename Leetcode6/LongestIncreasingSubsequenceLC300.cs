@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #LIS . Note this is longest increasing subsequence. There is another variant which is longest increasing subsequence SUM.
+﻿// #LIS . Note this is longest increasing subsequence. There is another variant which is longest increasing subsequence SUM.
 // #LC1626
 
 namespace Leetcode

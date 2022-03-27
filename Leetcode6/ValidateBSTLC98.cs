@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #RememberPattern
+﻿// #RememberPattern
 
 namespace Leetcode
 {
@@ -14,7 +8,7 @@ namespace Leetcode
         {
             return DFS(root, null, null);
         }
-        private bool DFS(TreeNode root,int? max, int? min)
+        private bool DFS(TreeNode root, int? max, int? min)
         {
             if (root == null)
                 return true;

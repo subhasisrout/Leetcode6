@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-// On similar lines, check https://leetcode.com/problems/find-the-celebrity/ (leetcode premium)
+﻿// On similar lines, check https://leetcode.com/problems/find-the-celebrity/ (leetcode premium)
 // but problem and solution can be found here - https://www.youtube.com/watch?v=LZJBZEnoYLQ
 
 // #Graph

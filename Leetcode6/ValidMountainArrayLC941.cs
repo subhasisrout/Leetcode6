@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class ValidMountainArrayLC941
     {
@@ -30,7 +23,7 @@ namespace Leetcode
                         continue;
                     }
                     else
-                    {                        
+                    {
                         isIncreasing = false;
                         if (i > 0) peakFound = true;
                         i++;
@@ -45,7 +38,7 @@ namespace Leetcode
                     }
                     else
                         return false;
-                }                
+                }
             }
 
             if (peakFound)

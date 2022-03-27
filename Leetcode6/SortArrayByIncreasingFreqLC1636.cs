@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #Remember.NET Right way to use comparer
+﻿// #Remember.NET Right way to use comparer
 // Logic is easy, but comparer has to be used.
 
 namespace Leetcode

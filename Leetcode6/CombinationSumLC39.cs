@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class CombinationSumLC39
     {
         public IList<IList<int>> CombinationSum(int[] candidates, int target)
-        {            
+        {
             IList<IList<int>> result = new List<IList<int>>();
             if (candidates == null || candidates.Length == 0)
                 return result;

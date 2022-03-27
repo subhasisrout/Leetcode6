@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
-
-// This is a typical DFS.
+﻿// This is a typical DFS.
 
 namespace Leetcode
 {

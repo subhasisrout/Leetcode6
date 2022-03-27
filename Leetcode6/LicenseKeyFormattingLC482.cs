@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Leetcode
 {
@@ -61,9 +57,9 @@ namespace Leetcode
 
             }
             if (output.Length >= 1)
-                return output.ToString().Substring(0,output.Length-1);
+                return output.ToString().Substring(0, output.Length - 1);
             return output.ToString();
-        
+
         }
     }
 }

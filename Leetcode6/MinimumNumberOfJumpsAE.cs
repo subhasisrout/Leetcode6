@@ -1,6 +1,4 @@
-﻿using System;
-
-// #LC #Leetcode 45 #Medium #Hard
+﻿// #LC #Leetcode 45 #Medium #Hard
 // There is also a O(N) and constant space solution, but much clever and trickier.
 // #RememberPattern
 

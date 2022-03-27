@@ -1,6 +1,4 @@
-﻿using System;
-
-// #RememberPattern #Similar to #BinaryTreeDiameterAE on the use of #TreeInfo class
+﻿// #RememberPattern #Similar to #BinaryTreeDiameterAE on the use of #TreeInfo class
 // #LC #Leetcode 110
 
 namespace Leetcode

@@ -1,7 +1,5 @@
 ﻿// #Self implementation. My solution is much easier and intuitive than #AlgoExpert #AE
 
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class SunsetViewsAE

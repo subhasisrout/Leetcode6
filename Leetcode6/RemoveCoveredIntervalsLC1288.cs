@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Similar idea of MergeIntervals #LC56
+﻿// Similar idea of MergeIntervals #LC56
 // #Neetcode - https://leetcode.com/problems/remove-covered-intervals/
 
 namespace Leetcode
@@ -14,7 +8,8 @@ namespace Leetcode
         public int RemoveCoveredIntervals(int[][] intervals)
         {
             //Sort by startTime asc and if they are equal, sort by endTime desc.
-            Array.Sort(intervals, (a, b) => {
+            Array.Sort(intervals, (a, b) =>
+            {
                 if (a[0] != b[0])
                     return a[0].CompareTo(b[0]);
                 else

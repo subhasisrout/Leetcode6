@@ -1,8 +1,5 @@
-﻿using System;
-
-// Basically you want to greedily pick the the intervals which ends soon so as to accomodate more intervals (or remove less intervals)
+﻿// Basically you want to greedily pick the the intervals which ends soon so as to accomodate more intervals (or remove less intervals)
 // Excellent explaination at Neetcode https://www.youtube.com/watch?v=nONCGxWoUfM
-
 
 namespace Leetcode
 {

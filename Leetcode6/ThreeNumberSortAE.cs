@@ -37,7 +37,7 @@ namespace Leetcode
             {
                 int value = order[i];
                 int count = buckets[i];
-                
+
                 while (count > 0)
                 {
                     array[k] = value;
@@ -81,7 +81,7 @@ namespace Leetcode
             {
                 isSwapped = false;
                 for (int i = 0; i < lastIndex; i++)
-                {                    
+                {
                     if (IsGreaterUsingOrder(array, order, i, i + 1))    //if (array[i] > array[i + 1])
                     {
                         isSwapped = true;

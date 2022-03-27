@@ -1,7 +1,4 @@
-﻿using System;
-
-
-//dp[k,j] --- max profit that can be made from i transactions up till j days.
+﻿//dp[k,j] --- max profit that can be made from i transactions up till j days.
 
 namespace Leetcode
 {

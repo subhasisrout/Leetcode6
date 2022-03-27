@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class SubArraySumEqualsKLC560
     {
@@ -30,7 +24,7 @@ namespace Leetcode
             return count;
         }
 
-            public int SubarraySumLowPerf(int[] nums, int k)
+        public int SubarraySumLowPerf(int[] nums, int k)
         {
             int count = 0;
             for (int i = 0; i < nums.Length; i++)

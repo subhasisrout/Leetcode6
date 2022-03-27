@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class FindTheDifferenceLC389
     {
@@ -22,7 +16,7 @@ namespace Leetcode
                 sCount += s[i] - '0';
             }
 
-            return (char)('a' + (char)((tCount -sCount) - '0') - 1);
+            return (char)('a' + (char)((tCount - sCount) - '0') - 1);
 
         }
     }

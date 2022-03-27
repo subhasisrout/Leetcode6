@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #RememberPattern
+﻿// #RememberPattern
 // Read the comments for better understanding
 // Attaching picture.
 
@@ -14,7 +8,7 @@ namespace Leetcode.LRUCache
     {
         Node head = new Node();
         Node tail = new Node();
-        Dictionary<int,Node> nodeMap;
+        Dictionary<int, Node> nodeMap;
         int cacheCapacity;
 
         public LRUCacheLeetCode146(int capacity)
@@ -73,20 +67,20 @@ namespace Leetcode.LRUCache
                 newNode.val = value;
                 nodeMap.Add(key, newNode);
                 AddToDoublyLinkedList(newNode);
-                
+
             }
 
 
 
         }
-        
+
         //We will add to the front of cache(head) and remove from tail
         //This implementation is such that "head" and "tail" are dummy nodes
         //which can never be null and do not contain any values.
         public void AddToDoublyLinkedList(Node node)
         {
             Node headNext = head.next;
-            
+
             node.prev = head;
             node.next = headNext;
 

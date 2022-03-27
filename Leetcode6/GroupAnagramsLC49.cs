@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Leetcode
 {
@@ -14,7 +10,7 @@ namespace Leetcode
             for (int i = 0; i < strs.Length; i++)
             {
                 string currentWord = strs[i];
-            
+
                 //START - this approach is just to find if 2 words are same. abcba will be represented as 22100000000000.
                 //The other alternative is to sort the word, which is more expensive.
                 char[] currCharArray = currentWord.ToCharArray();

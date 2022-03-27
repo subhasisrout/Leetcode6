@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-// #Leetcode #LC 198 House Robber. Different terminology but exactly same algorithm and dynamic programming principles.
+﻿// #Leetcode #LC 198 House Robber. Different terminology but exactly same algorithm and dynamic programming principles.
 
 namespace Leetcode
 {

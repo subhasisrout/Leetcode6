@@ -17,7 +17,7 @@ namespace Leetcode
             {
                 if (primes[i])
                 {
-                    for (int j = i; j * i< primes.Length; j++)
+                    for (int j = i; j * i < primes.Length; j++)
                     {
                         primes[i * j] = false;
                     }

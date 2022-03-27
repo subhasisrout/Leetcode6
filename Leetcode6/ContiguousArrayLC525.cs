@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-// From Leetcode solution
+﻿// From Leetcode solution
 // Documented in scanned photo
 // The key is to understand the graph (x-y axis) in Leetcode solution 2 (although using solution 3 here)
-
 
 namespace Leetcode
 {

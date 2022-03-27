@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// The key is not only Level order traversal #BFS
+﻿// The key is not only Level order traversal #BFS
 // But also do the traversal from right to left <------------------
 // <-----------
 // <-----------

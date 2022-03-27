@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class MinimumCharactersForWordsAE
     {
@@ -16,7 +10,7 @@ namespace Leetcode
                 string currWord = words[i];
                 Dictionary<char, int> mapForCurrentWord = new Dictionary<char, int>();
                 for (int j = 0; j < currWord.Length; j++)
-                {                    
+                {
                     if (!mapForCurrentWord.ContainsKey(currWord[j]))
                         mapForCurrentWord.Add(currWord[j], 1);
                     else

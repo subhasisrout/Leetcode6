@@ -22,7 +22,7 @@ namespace Leetcode
                 Swap(nums, i, j);
                 i++;
                 j--;
-            }            
+            }
         }
         private void Swap(int[] arr, int index1, int index2)
         {

@@ -1,8 +1,4 @@
-﻿
-using System;
-using System.Linq;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class HouseRobberLC213
     {

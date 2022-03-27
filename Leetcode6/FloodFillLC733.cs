@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class FloodFillLC733
     {
@@ -17,7 +11,7 @@ namespace Leetcode
             return image;
         }
 
-        private void FloodFillDFSUtil(int[][] image,int startingColor, int newColor, int cr, int cc)
+        private void FloodFillDFSUtil(int[][] image, int startingColor, int newColor, int cr, int cc)
         {
             if (cr < 0 || cr >= image.Length || cc < 0 || cc >= image[0].Length || image[cr][cc] != startingColor)
                 return;

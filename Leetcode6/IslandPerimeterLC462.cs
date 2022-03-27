@@ -1,7 +1,5 @@
 ﻿// Very easy and intuitive solution from Micheal Muinos https://www.youtube.com/watch?v=fFQVHjNUwyU
 
-using System;
-
 namespace Leetcode
 {
     public class IslandPerimeterLC462
@@ -25,8 +23,8 @@ namespace Leetcode
             int localPerimeter = 0;
             if (j - 1 < 0 || grid[i][j - 1] == 0) localPerimeter++;
             if (j + 1 >= grid[0].Length || grid[i][j + 1] == 0) localPerimeter++;
-            if (i - 1 < 0 || grid[i-1][j] == 0) localPerimeter++;
-            if (i + 1 >= grid.Length || grid[i+1][j] == 0) localPerimeter++;
+            if (i - 1 < 0 || grid[i - 1][j] == 0) localPerimeter++;
+            if (i + 1 >= grid.Length || grid[i + 1][j] == 0) localPerimeter++;
             return localPerimeter;
         }
     }

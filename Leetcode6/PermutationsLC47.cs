@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-
-// #NESTEDMETHOD
+﻿// #NESTEDMETHOD
 // Intuitive. Inspired from #Neetcode. https://www.youtube.com/watch?v=qhBVWf0YafA 
 // unlike SORTING + if (visited[i] || i > 0 && nums[i] == nums[i-1] && !visited[i-1]) continue;]
-
 
 namespace Leetcode
 {

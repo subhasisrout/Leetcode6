@@ -1,8 +1,5 @@
-﻿using System;
-
-// #Binary Search variant of trying all possiblities of answers.
+﻿// #Binary Search variant of trying all possiblities of answers.
 // Similar to Koko Eating Bananas LC875 and MinDaysToMakeMBouquetsLC1482
-
 
 namespace Leetcode
 {

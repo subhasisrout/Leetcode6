@@ -1,7 +1,4 @@
-﻿
-using System;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class IndexEqualsValueAE
     {

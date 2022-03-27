@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-// Similar to KthLargestElementLC215 EXCEPT > or < is on the basis of map count. So declared global.
+﻿// Similar to KthLargestElementLC215 EXCEPT > or < is on the basis of map count. So declared global.
 // Remember #QuickSelect QuickSelectHelper from AlgoExpert #AE as its more intuitive.
 
 namespace Leetcode

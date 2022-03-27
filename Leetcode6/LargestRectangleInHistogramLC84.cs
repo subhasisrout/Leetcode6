@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #RememberPattern
+﻿// #RememberPattern
 // #Stack #MonotonicStack
 // This solution found in https://www.youtube.com/watch?v=0do2734xhnU
 // is more #intuitive than #AlgoExpert #AE.
@@ -9,13 +6,12 @@ using System.Collections.Generic;
 // find lb and rb can be done using brute force by looking all elements, all time. This uses Stack.
 // Note lb[0] is -1 because we are storing index of "next smaller element". similarly rb[lastindex] = totalLength.
 
-
 namespace Leetcode
 {
     public class LargestRectangleInHistogramLC84
     {
         public int LargestRectangleArea(int[] heights)
-        {            
+        {
             int maxArea = 0;
             int[] lb = new int[heights.Length];
             int[] rb = new int[heights.Length];

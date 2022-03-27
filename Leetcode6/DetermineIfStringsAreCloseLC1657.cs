@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-/*
+﻿/*
 #GoodQuestion
 Key here is the following - 
 1. Both string have the same set of charracters. (

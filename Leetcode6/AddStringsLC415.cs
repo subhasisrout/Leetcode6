@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Leetcode
 {
@@ -18,9 +14,9 @@ namespace Leetcode
             StringBuilder result = new StringBuilder();
             int carry = 0;
 
-            while(i>=0 || j>=0)
+            while (i >= 0 || j >= 0)
             {
-                int partialResult = ((i < 0) ? 0 :Convert.ToInt32(num1[i] - '0')) + ((j < 0) ? 0 : Convert.ToInt32(num2[j] - '0')) + carry;
+                int partialResult = ((i < 0) ? 0 : Convert.ToInt32(num1[i] - '0')) + ((j < 0) ? 0 : Convert.ToInt32(num2[j] - '0')) + carry;
                 result.Append(partialResult % 10);
                 if (partialResult >= 10)
                     carry = partialResult / 10;

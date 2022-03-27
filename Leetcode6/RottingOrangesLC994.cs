@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     //difference between jagged array and 2d array.
     // jagged array in .NET is int[][]. Array of array. Each array (inside the "master array") can be of differnet length
@@ -39,7 +33,7 @@ namespace Leetcode
                 infectedOranges = new HashSet<string>();
                 foreach (var rottenOrange in rottenOranges)
                 {
-                    int i = Convert.ToInt32(rottenOrange.Split(new string[] { "," },StringSplitOptions.RemoveEmptyEntries)[0]);
+                    int i = Convert.ToInt32(rottenOrange.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries)[0]);
                     int j = Convert.ToInt32(rottenOrange.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries)[1]);
 
                     for (int u = 0; u <= directions.GetUpperBound(0); u++)
@@ -52,7 +46,7 @@ namespace Leetcode
                             infectedOranges.Add(newI + "," + newJ);
                             freshOranges.Remove(newI + "," + newJ);
                         }
-                    }                    
+                    }
                 }
 
                 if (infectedOranges.Count == 0)

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Easy but #tricky because of wraparound.
+﻿// Easy but #tricky because of wraparound.
 // Look at the #CleanLessLines method.
 namespace Leetcode
 {

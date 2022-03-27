@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 // #SystemDesign
 // Idea taken from https://leetcode.com/discuss/interview-question/124658/Design-a-URL-Shortener-(-TinyURL-)-System/
@@ -12,12 +8,12 @@ namespace Leetcode
 {
     public class EncodeDecodeTinyUrlLC535
     {
-        Dictionary<int, KeyValuePair<string,string>> idShortUrlMap = new Dictionary<int, KeyValuePair<string,string>>();
+        Dictionary<int, KeyValuePair<string, string>> idShortUrlMap = new Dictionary<int, KeyValuePair<string, string>>();
         public string encode(string longUrl)
         {
             int mapCount = idShortUrlMap.Count;
-            string shortUrl = IdToShortUrl(mapCount+1);
-            idShortUrlMap.Add(mapCount, new KeyValuePair<string, string>(shortUrl,longUrl));
+            string shortUrl = IdToShortUrl(mapCount + 1);
+            idShortUrlMap.Add(mapCount, new KeyValuePair<string, string>(shortUrl, longUrl));
             return shortUrl;
 
         }

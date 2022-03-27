@@ -1,6 +1,4 @@
-﻿using System;
-
-// #RememberPattern
+﻿// #RememberPattern
 // Note you could use a MaxHeap also, but then Heap size would be bigger. If you use MinHeap and k=2, Heap size would never cross 3.
 // Remember code for MinHeap.
 

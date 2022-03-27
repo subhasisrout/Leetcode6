@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #SlidingWindow pattern
+﻿// #SlidingWindow pattern
 // #RememberPattern
 // Explaination good in https://www.youtube.com/watch?v=TAMLsfGiyOg
 

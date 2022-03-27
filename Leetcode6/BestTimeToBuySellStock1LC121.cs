@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Came up with the below solution. Track the global minimum and during each step towards right, either update it or update maxProfit.
+﻿// Came up with the below solution. Track the global minimum and during each step towards right, either update it or update maxProfit.
 
 namespace Leetcode
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-// #Inspired from #AlgoExpert #AE SubArraySort
+﻿// #Inspired from #AlgoExpert #AE SubArraySort
 
 namespace Leetcode
 {

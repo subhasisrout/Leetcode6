@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class VerifyAlienDictionaryLC953
     {
@@ -20,7 +14,7 @@ namespace Leetcode
 
             for (int i = 0; i < words.Length - 1; i++)
             {
-                if (!WordsSorted(words[i], words[i + 1],alphabet))
+                if (!WordsSorted(words[i], words[i + 1], alphabet))
                     return false;
             }
             return true;
@@ -28,7 +22,7 @@ namespace Leetcode
         }
 
         private bool WordsSorted(string word1, string word2, int[] alphabet)
-        {           
+        {
             char[] word1CharArray = word1.ToCharArray();
             char[] word2CharArray = word2.ToCharArray();
 

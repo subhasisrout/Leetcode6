@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-// Note LinkedList<int> can be effectively used as a Deque (Deck or Double ended queue)
+﻿// Note LinkedList<int> can be effectively used as a Deque (Deck or Double ended queue)
 
 namespace Leetcode
 {
-    
+
     public class ImplementStackUsing2QueuesLC225
     {
         //2 queues approach
@@ -27,7 +24,7 @@ namespace Leetcode
                 {
                     tempQ.Enqueue(mainQ.Dequeue());
                 }
-                
+
                 // stack push equivalent
                 mainQ.Enqueue(x);
 
@@ -36,7 +33,7 @@ namespace Leetcode
                 {
                     mainQ.Enqueue(tempQ.Dequeue());
                 }
-                
+
                 //The above 3 operation rearranges stuff as required in a stack.
             }
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class SubtreeOfAnotherTreeLC572
     {
@@ -28,7 +22,7 @@ namespace Leetcode
                 return false;
             else
                 return IsSameTree(s.left, t.left) && IsSameTree(s.right, t.right);
-            
+
         }
     }
 }

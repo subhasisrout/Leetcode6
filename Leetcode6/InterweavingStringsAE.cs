@@ -1,6 +1,4 @@
-﻿using System;
-
-// #Leetcode #LC 97
+﻿// #Leetcode #LC 97
 
 namespace Leetcode
 {
@@ -27,7 +25,7 @@ namespace Leetcode
 
             if (i < one.Length && one[i] == three[k])
             {
-                cache[i,j] = AreInterwoven(one, two, three, i + 1, j, cache);
+                cache[i, j] = AreInterwoven(one, two, three, i + 1, j, cache);
                 if (cache[i, j] == 1)
                     return 1; //else you cannot return -1 (false). you need to check for 'j'(string two), which is done below.
             }

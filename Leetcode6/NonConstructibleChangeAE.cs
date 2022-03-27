@@ -1,6 +1,4 @@
-﻿using System;
-
-// #SimpleButDeep - Check why this algorithm works.
+﻿// #SimpleButDeep - Check why this algorithm works.
 
 namespace Leetcode
 {
@@ -20,6 +18,6 @@ namespace Leetcode
             return currMinChange + 1;
         }
 
-        
+
     }
 }

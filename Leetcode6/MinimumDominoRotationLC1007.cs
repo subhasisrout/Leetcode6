@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class MinimumDominoRotationLC1007
     {
@@ -23,7 +17,7 @@ namespace Leetcode
 
         private int NumSwaps(int v, int[] a, int[] b)
         {
-            int numSwaps = 0; 
+            int numSwaps = 0;
             for (int i = 0; i < a.Length; i++)
             {
                 if (a[i] != v && b[i] != v)

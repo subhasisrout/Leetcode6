@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class DeleteNodesReturnForestLC1110
     {
@@ -22,7 +16,7 @@ namespace Leetcode
                 remaining.Add(root);
 
             return remaining;
- 
+
         }
 
         private TreeNode RemoveNodes(TreeNode root, HashSet<int> toDelete, List<TreeNode> remaining)

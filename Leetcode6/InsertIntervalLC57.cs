@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Intuitive explaination at
+﻿// Intuitive explaination at
 // https://leetcode.com/problems/insert-interval/discuss/21602/Short-and-straight-forward-Java-solution
 
 namespace Leetcode

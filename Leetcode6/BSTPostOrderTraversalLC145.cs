@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class BSTPostOrderTraversalLC145
     {

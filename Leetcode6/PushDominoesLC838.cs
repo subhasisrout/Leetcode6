@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Inspired from #Neetcode https://www.youtube.com/watch?v=evUFsOb_iLY
+﻿// Inspired from #Neetcode https://www.youtube.com/watch?v=evUFsOb_iLY
 
 namespace Leetcode
 {

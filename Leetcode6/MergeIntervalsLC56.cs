@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-// Taken from Leetcode solution
+﻿// Taken from Leetcode solution
 // I guess its more intuitive than MergeOverlappingIntervalsAE.cs
 // #Smart way to Sort (one liner)
 
@@ -23,7 +19,7 @@ namespace Leetcode
                 else //only update the endTime. No new entry created.
                     merged.Last()[1] = Math.Max(merged.Last()[1], intervals[i][1]);
             }
-            return merged.ToArray(); 
+            return merged.ToArray();
         }
     }
 }

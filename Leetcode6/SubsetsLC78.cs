@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// This is a dfs PLUS backtrackking problem. For visuals, use SubsetsLC78.jpg
+﻿// This is a dfs PLUS backtrackking problem. For visuals, use SubsetsLC78.jpg
 // Use DFS plus backtrackking, whenever the problem is like - "possible number of", "all exhaustive list of"
 // On the contrary, if the problem is maximum/minimum #'s of, its "greedy"
 // #DFS #Backtrack #Graph

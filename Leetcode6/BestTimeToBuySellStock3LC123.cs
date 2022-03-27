@@ -1,6 +1,4 @@
-﻿using System;
-
-// Taken from pepcoding. Quite intuitive explaination. https://www.youtube.com/watch?v=wuzTpONbd-0
+﻿// Taken from pepcoding. Quite intuitive explaination. https://www.youtube.com/watch?v=wuzTpONbd-0
 
 namespace Leetcode
 {

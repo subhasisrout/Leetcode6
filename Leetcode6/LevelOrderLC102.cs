@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// DFS is very short and easy to remember too. Also you can easily solve 2 other variants described below.
+﻿// DFS is very short and easy to remember too. Also you can easily solve 2 other variants described below.
 // Just remember the base condition and result[level].Add(root.val)
 
 // 3 difference from Binary Tree Level Order Traversal II LC107
@@ -34,7 +27,7 @@ namespace Leetcode
             if (root == null)
                 return result;
 
-            
+
 
             Queue<TreeNode> q = new Queue<TreeNode>();
             q.Enqueue(root);
@@ -46,13 +39,13 @@ namespace Leetcode
                 //loop for a given level
                 queueForNodesForAGivenLevel = new Queue<TreeNode>();
                 listLevel = new List<int>();
-                
+
                 while (q.Count != 0)
                 {
                     TreeNode node = q.Dequeue();
                     queueForNodesForAGivenLevel.Enqueue(node);  // or we can use .Count and do a for loop. (from Kevin's video)               
                 }
-                
+
                 while (queueForNodesForAGivenLevel.Count != 0)
                 {
                     TreeNode nodeAtAGivenLevel = queueForNodesForAGivenLevel.Dequeue();
@@ -79,7 +72,7 @@ namespace Leetcode
             if (root == null)
                 return;
             if (level == result.Count)
-            result.Add(new List<int>()); //.Insert(0,..) for the second variant.
+                result.Add(new List<int>()); //.Insert(0,..) for the second variant.
 
             result[level].Add(root.val); // This will be after recursion for the second variant and with [.Count - level - 1]
             LevelOrderHelper(root.left, result, level + 1);

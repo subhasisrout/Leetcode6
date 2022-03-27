@@ -1,6 +1,5 @@
 ﻿// #Similar to LC70
 // #Instead of 2, this is dynamic.
-using System.Collections.Generic;
 
 namespace Leetcode
 {
@@ -15,7 +14,7 @@ namespace Leetcode
             {
                 //dpArray[i] = dpArray[i - 1] + dpArray[i - 2];
                 int k = 1;
-                while (k <= maxSteps && (i-k)>=0)
+                while (k <= maxSteps && (i - k) >= 0)
                 {
                     dpArray[i] += dpArray[i - k];
                     k++;

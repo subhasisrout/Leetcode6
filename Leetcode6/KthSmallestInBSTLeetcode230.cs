@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #RememberPattern
+﻿// #RememberPattern
 
 namespace Leetcode
 {
@@ -16,7 +10,7 @@ namespace Leetcode
             Inorder(root, k, nums);
             return nums[1];
         }
-        public void Inorder(TreeNode root, int k,int[] nums)
+        public void Inorder(TreeNode root, int k, int[] nums)
         {
             if (root == null)
                 return;

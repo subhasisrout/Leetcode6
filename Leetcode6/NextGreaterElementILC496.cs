@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class NextGreaterElementILC496
     {
@@ -18,7 +12,7 @@ namespace Leetcode
             }
             return result;
         }
-        private Dictionary<int,int> NextGreaterElementOnRight(int[] nums)
+        private Dictionary<int, int> NextGreaterElementOnRight(int[] nums)
         {
             Stack<int> stack = new Stack<int>();
             Dictionary<int, int> result = new Dictionary<int, int>();

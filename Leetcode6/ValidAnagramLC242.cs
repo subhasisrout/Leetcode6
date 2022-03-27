@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class ValidAnagramLC242
     {
@@ -14,7 +8,7 @@ namespace Leetcode
                 return false;
 
             int[] arr = new int[26];
-            
+
             char[] sArr = s.ToCharArray();
             char[] tArr = t.ToCharArray();
 

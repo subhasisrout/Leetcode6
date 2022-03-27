@@ -33,7 +33,7 @@ namespace Leetcode
             int colCount = matrix[0].Length;
             for (int i = 0; i < matrix.Length; i++)
             {
-                for (int j = 0; j < matrix[0].Length/2; j++)
+                for (int j = 0; j < matrix[0].Length / 2; j++)
                 {
                     //Swap matrix[i,j] with matrix[i,colCount - 1 - j]
                     int temp = matrix[i][j];

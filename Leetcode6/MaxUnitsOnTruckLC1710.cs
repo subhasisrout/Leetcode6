@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-
-
-// #KeyValuePair list sorting
+﻿// #KeyValuePair list sorting
 // Although this will also do - Array.Sort(boxTypes, (left, right) => right[1] - left[1]);
 namespace Leetcode
 {

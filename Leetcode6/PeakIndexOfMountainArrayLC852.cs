@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #Less lines of code - idea https://www.youtube.com/watch?v=W9QJ8HaRvJQ
+﻿// #Less lines of code - idea https://www.youtube.com/watch?v=W9QJ8HaRvJQ
 // The code I submitted had lot of if-else checks and boundary condition checks.
 
 // Note its about finding #pivot. Finding pivot here is different from finding pivot in rotated array LC33
@@ -20,7 +14,7 @@ namespace Leetcode
         private int BinSearch(int[] arr, int start, int end)
         {
             while (start < end) // not less than (not less than or equal to)
-            { 
+            {
                 int mid = start + (end - start) / 2;
                 if (arr[mid + 1] < arr[mid])
                     end = mid; // answer could be mid, so we are not doing end = mid-1

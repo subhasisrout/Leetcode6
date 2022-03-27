@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//Looks like there are a variety of questions around this logic.
+﻿//Looks like there are a variety of questions around this logic.
 //#Leetcode #LC503
 //#RememberPattern
 //Excellent explaination from pepcoding for one of its variety (Next greater element on right) 
@@ -23,7 +17,7 @@ namespace Leetcode
                 result[i] = -1;
 
             Stack<int> stack = new Stack<int>();
-            
+
             // General formula shared in PepCoding video
             // Pop, Update Result, Push currentVal
             // -,a,+

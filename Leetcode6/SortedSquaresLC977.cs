@@ -1,6 +1,4 @@
-﻿using System;
-
-// #AE
+﻿// #AE
 // Easier and more intuitive version in Algo Expert
 
 namespace Leetcode
@@ -26,7 +24,7 @@ namespace Leetcode
 
             int[] result = new int[A.Length];
 
-            if ( j == 0)
+            if (j == 0)
             {
                 for (int k = 0; k < A.Length; k++)
                 {

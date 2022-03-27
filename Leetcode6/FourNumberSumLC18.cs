@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #Slightly different from the #AlgoExpert #AE question
+﻿// #Slightly different from the #AlgoExpert #AE question
 // Here the number is not distinct
 // This solution runs in O(n^3) time unlike AE's one. This solution does not take extra space
 // and builds upon 2Sum problem. Refer GoodTecher solution for more information.

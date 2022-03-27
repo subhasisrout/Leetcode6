@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-// O(1) explanation is from Nick White. Can be intuitively learned by traversing from right --> emulating backspace --> then compare the last char
+﻿// O(1) explanation is from Nick White. Can be intuitively learned by traversing from right --> emulating backspace --> then compare the last char
 // continue decrementing pointer -->
 
 // O(N+M) using stack is much much easier and intuitive. From Kevin.

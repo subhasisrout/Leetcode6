@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-// #Easy To Remember
+﻿// #Easy To Remember
 // #This forms the base for many questions and is also important as a standalone question.
 
 namespace Leetcode

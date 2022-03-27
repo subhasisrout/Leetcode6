@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// The children can be represented as arrays or Hashtable. This code uses HashTable.
+﻿// The children can be represented as arrays or Hashtable. This code uses HashTable.
 
 // I like this HashMap approach better
 // Kind of sunken in the mind. Also its more readable and generic. Neetcode did using HashMap.
@@ -68,7 +66,7 @@ namespace Leetcode
             {
                 this.Children = new Dictionary<char, TrieNode>();
             }
-            public Dictionary<char,TrieNode> Children { get; set; }
+            public Dictionary<char, TrieNode> Children { get; set; }
             public bool IsEndOfWord { get; set; }
         }
     }

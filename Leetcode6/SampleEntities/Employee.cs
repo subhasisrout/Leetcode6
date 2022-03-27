@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-//Sample entity and comparer for testing generic priority queue/maxheap/minheap
+﻿//Sample entity and comparer for testing generic priority queue/maxheap/minheap
 
 namespace Leetcode.SampleEntities
 {
@@ -29,7 +27,7 @@ namespace Leetcode.SampleEntities
 
             Employee emp = new Employee() { Id = 1, Name = "Subhasis", Salary = 100 };
             kvPairList.Add(new KeyValuePair<Employee, Employee>(emp, emp));
-            
+
             emp = new Employee() { Id = 2, Name = "Kabir", Salary = 50 };
             kvPairList.Add(new KeyValuePair<Employee, Employee>(emp, emp));
 

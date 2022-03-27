@@ -13,7 +13,7 @@ namespace Leetcode
             ListNode odd = head;
             ListNode even = head.next;
             ListNode orignalEven = even;
-            
+
             while (even != null && even.next != null)
             {
                 odd.next = even.next;

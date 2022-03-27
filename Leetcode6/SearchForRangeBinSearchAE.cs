@@ -21,10 +21,10 @@ namespace Leetcode
                 {
                     int resultLeft = FindLeftMostTargetPos(nums, target, mid);
                     int resultRight = FindRightMostTargetPos(nums, target, mid);
-                    return new int[] {resultLeft, resultRight };
+                    return new int[] { resultLeft, resultRight };
                 }
             }
-            return new int[] {-1,-1};
+            return new int[] { -1, -1 };
         }
 
         private int FindRightMostTargetPos(int[] array, int target, int left)
@@ -57,7 +57,7 @@ namespace Leetcode
         {
             if (right == 0)
                 return 0;
-            
+
             int l = 0;
             int r = right;
 

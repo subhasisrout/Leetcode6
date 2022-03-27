@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-// #Medium problem becomes easy by breaking it into helper function. Michael Muinos explains very nicely - https://www.youtube.com/watch?v=BUZ0PLt1FAA
+﻿// #Medium problem becomes easy by breaking it into helper function. Michael Muinos explains very nicely - https://www.youtube.com/watch?v=BUZ0PLt1FAA
 // #BinarySearch variant. Instead of array being sorted, we are using range of values (min-max) and halfing everytime.
 // #Variant
 // #LC875 is another variant. Solved directly in leetcode. Always break the binary-search part with helper function.

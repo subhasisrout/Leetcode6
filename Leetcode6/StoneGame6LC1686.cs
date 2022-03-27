@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #Maths  - Alice needs to maximize a1 + b1.
+﻿// #Maths  - Alice needs to maximize a1 + b1.
 // a1 - Maximize because Alice gets it.
 // b1 - Maximize because Bob does not get it. So - a1 + b1.
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #Similar to LC457. Circular Array Loop
+﻿// #Similar to LC457. Circular Array Loop
 // Important part is this method - GetNewIndexAfterJump
 
 namespace Leetcode

@@ -1,8 +1,4 @@
-﻿using PriorityQueueFromCodeProject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace Leetcode
 {
@@ -20,12 +16,12 @@ namespace Leetcode
                     counts[arr[i]] = counts[arr[i]] + 1;
             }
             CountsComparer countsComparer = new CountsComparer(counts);
-            List<KeyValuePair<char,char>> data = new List<KeyValuePair<char, char>>();
+            List<KeyValuePair<char, char>> data = new List<KeyValuePair<char, char>>();
             foreach (var item in counts)
             {
                 data.Add(new KeyValuePair<char, char>(item.Key, item.Key));
             }
-            PriorityQueueFromCodeProject.PriorityQueue<char, char> maxHeap = new PriorityQueueFromCodeProject.PriorityQueue<char, char>(data,countsComparer);
+            PriorityQueueFromCodeProject.PriorityQueue<char, char> maxHeap = new PriorityQueueFromCodeProject.PriorityQueue<char, char>(data, countsComparer);
 
             StringBuilder result = new StringBuilder();
             while (maxHeap.Count > 1)
@@ -52,7 +48,7 @@ namespace Leetcode
                     return "";
                 result.Append(last);
             }
-            
+
             return result.ToString();
         }
 
@@ -70,5 +66,5 @@ namespace Leetcode
         }
 
     }
-   
+
 }

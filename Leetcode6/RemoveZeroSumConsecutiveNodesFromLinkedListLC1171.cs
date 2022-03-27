@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// Excellent explaination with intuition at https://www.youtube.com/watch?v=tss5biw6ctI
+﻿// Excellent explaination with intuition at https://www.youtube.com/watch?v=tss5biw6ctI
 // #PrefixSum #HashMap
 // #Clever
 

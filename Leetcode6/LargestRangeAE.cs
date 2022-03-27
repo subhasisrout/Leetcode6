@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #Hard #Tricky #LC #Leetcode 128. #LC128
+﻿// #Hard #Tricky #LC #Leetcode 128. #LC128
 // Two solutions present. Check the second solution using Dictionary/HashMap.
 
 namespace Leetcode

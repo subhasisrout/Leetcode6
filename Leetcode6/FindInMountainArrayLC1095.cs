@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// This is a combination of PeakIndexOfMountainArrayLC852 (start<end) +
+﻿// This is a combination of PeakIndexOfMountainArrayLC852 (start<end) +
 // Normal Binary Search for distinct inc/dec elements. (start<=end)
 
 namespace Leetcode
@@ -74,5 +68,5 @@ namespace Leetcode
     {
         public int Get(int index) { return -1; }
         public int Length() { return -1; }
-  }
+    }
 }

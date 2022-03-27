@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class BoatsToSavePeopleLC881
     {
@@ -17,7 +11,7 @@ namespace Leetcode
 
             while (i <= j)
             {
-                if (i==j)
+                if (i == j)
                 {
                     numBoats++;
                     break;

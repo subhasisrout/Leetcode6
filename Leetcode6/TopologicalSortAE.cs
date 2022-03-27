@@ -6,8 +6,6 @@
 
 // #Leetcode #LC210 (except the dependency order is opposite) and LC207
 
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class TopologicalSortAE
@@ -32,7 +30,7 @@ namespace Leetcode
             {
                 var node = nodesWithNoPreReqs.Dequeue();
                 topologicallySortedList.Add(node.Job);
-                
+
                 //Start Below Block updates .Deps property and updates PreReqCount of each dep
                 var deps = node.Deps;
                 foreach (var dep in deps)
@@ -94,7 +92,7 @@ namespace Leetcode
         private void AddNode(int job)
         {
             this.Graph.Add(job, new JobNode(job));
-            this.Nodes.Add(this.Graph[job]);            
+            this.Nodes.Add(this.Graph[job]);
         }
 
     }

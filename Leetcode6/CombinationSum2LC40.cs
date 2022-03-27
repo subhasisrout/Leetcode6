@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-//Refer this rather than Kevin Naughton Jr. This explanation is much better as the recursion tree for DFS was drawn
+﻿//Refer this rather than Kevin Naughton Jr. This explanation is much better as the recursion tree for DFS was drawn
 // https://www.youtube.com/watch?v=j9_qWJClp64
 // #DFS #Graph #Backtrack
 // Very similar to LC39. Please check.

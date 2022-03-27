@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #AlgoExpert #AE #Tricky
+﻿// #AlgoExpert #AE #Tricky
 // Note this can also be done using a MinHeap. Assuming there is already an implementation of MinHeap/PriorityQueue, 
 // the minheap solution (in AlgoExpert) is lesser line of code.
 

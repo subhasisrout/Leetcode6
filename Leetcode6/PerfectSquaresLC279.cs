@@ -1,6 +1,4 @@
-﻿using System;
-
-// For visualization/intuition, refer pepcoding at - https://www.youtube.com/watch?v=aZuQXkO0-XA
+﻿// For visualization/intuition, refer pepcoding at - https://www.youtube.com/watch?v=aZuQXkO0-XA
 namespace Leetcode
 {
     public class PerfectSquaresLC279

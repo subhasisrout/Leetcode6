@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-// #RememberPattern
+﻿// #RememberPattern
 // #FirstSolution :: All cells having (rowIndex + colIndex) same can be clubbed together and sorted.
 // #SecondSolution :: Use a queue and traverse until queue is not empty. (Idea taken from Leetcode other submissions)
 // Check the diagram which shows the sequencing of row and column index in the queue

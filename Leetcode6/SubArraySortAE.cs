@@ -1,6 +1,4 @@
-﻿using System;
-
-// #Leetcode #LC 581
+﻿// #Leetcode #LC 581
 
 namespace Leetcode
 {

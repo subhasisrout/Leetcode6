@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Look nowhere else. Only refer https://www.youtube.com/watch?v=q6IEA26hvXc
+﻿// Look nowhere else. Only refer https://www.youtube.com/watch?v=q6IEA26hvXc
 
 namespace Leetcode
 {

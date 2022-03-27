@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Yet another approach is cyclic sort. This approach be used in variety of places. Examples
+﻿// Yet another approach is cyclic sort. This approach be used in variety of places. Examples
 // LC268, LC448, LC287, LC442, LC645, LC41
 // Idea taken from https://www.youtube.com/watch?v=JfinxytTYFQ
 

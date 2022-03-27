@@ -9,9 +9,6 @@
 // DO NOT USE FOR MINDMAP.
 // Instead use CourseScheduleLC207 (2 graphs - 1 for prereqs and 1 for dependencies (create dependencies))
 
-
-using System.Collections.Generic;
-
 namespace Leetcode2
 {
     public class CourseScheduleLC210
@@ -36,7 +33,7 @@ namespace Leetcode2
             {
                 var node = nodesWithNoPreReqs.Dequeue();
                 topologicallySortedList.Add(node.Job);
-                
+
                 //Start Below Block updates .Deps property and updates PreReqCount of each dep
                 var deps = node.Deps;
                 foreach (var dep in deps)
@@ -98,7 +95,7 @@ namespace Leetcode2
         private void AddNode(int job)
         {
             this.Graph.Add(job, new JobNode(job));
-            this.Nodes.Add(this.Graph[job]);            
+            this.Nodes.Add(this.Graph[job]);
         }
 
     }

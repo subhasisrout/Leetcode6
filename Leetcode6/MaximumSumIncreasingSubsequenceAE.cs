@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #AE #DP. Excellent intuitive explaination in AE.
+﻿// #AE #DP. Excellent intuitive explaination in AE.
 
 namespace Leetcode
 {
     public class MaximumSumIncreasingSubsequenceAE
     {
-		public static List<List<int>> MaxSumIncreasingSubsequence(int[] array)
-		{
-			int[] sums = (int[]) array.Clone(); // max sum at a particular index (with constraint in place) NOT the answer till a specific index;
-			int maxSumIdx = 0;
-			int[] pastIdxSequences = new int[array.Length];
+        public static List<List<int>> MaxSumIncreasingSubsequence(int[] array)
+        {
+            int[] sums = (int[])array.Clone(); // max sum at a particular index (with constraint in place) NOT the answer till a specific index;
+            int maxSumIdx = 0;
+            int[] pastIdxSequences = new int[array.Length];
             for (int i = 0; i < pastIdxSequences.Length; i++)
-				pastIdxSequences[i] = -1;
+                pastIdxSequences[i] = -1;
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -42,7 +36,7 @@ namespace Leetcode
             result.Add(BuildResultList(array, pastIdxSequences, maxSumIdx));
 
             return result;
-		}
+        }
 
         private static List<int> BuildResultList(int[] array, int[] pastIdxSequences, int currIdx)
         {

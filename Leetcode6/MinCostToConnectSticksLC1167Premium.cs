@@ -1,11 +1,4 @@
-﻿using PriorityQueueFromCodeProject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class MinCostToConnectSticksLC1167Premium
     {
@@ -19,7 +12,7 @@ namespace Leetcode
                 minHeap.Enqueue(sticks[i], sticks[i]);
             }
 
-            while (minHeap.Count >=2)
+            while (minHeap.Count >= 2)
             {
                 int sum = minHeap.DequeueValue() + minHeap.DequeueValue();
                 cost += sum;

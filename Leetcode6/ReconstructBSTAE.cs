@@ -1,27 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Note a valid #BST have left child STRICTLY less than the parent and right child could be equal to or greater than the parent.
+﻿// Note a valid #BST have left child STRICTLY less than the parent and right child could be equal to or greater than the parent.
 // left child < parent <= right child
 // #List.GetRange method is useful for slicing
 // #Leetcode #LC 1008
-
 
 namespace Leetcode
 {
     public class ReconstructBSTAE
     {
-		public class BST
-		{
-			public int value;
-			public BST left = null;
-			public BST right = null;
+        public class BST
+        {
+            public int value;
+            public BST left = null;
+            public BST right = null;
 
-			public BST(int value)
-			{
-				this.value = value;
-			}
-		}
+            public BST(int value)
+            {
+                this.value = value;
+            }
+        }
 
         // Approach 1 - ( O(n^2) time)
         /*public BST ReconstructBst(List<int> preOrderTraversalValues)

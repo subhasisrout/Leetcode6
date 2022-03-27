@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// #DFS #Backtrack #Graph
+﻿// #DFS #Backtrack #Graph
 // #RememberPattern
 // Observe the difference between this and LC78
 // // This is more generic than AE version and can be applied in Permuatation-II as well. Learn this.
@@ -41,7 +39,7 @@ namespace Leetcode
             {
                 // In Permuations 2 - LC47 and Sorting required.
                 // This line become if (visited[i] || i > 0 && nums[i] == nums[i-1] && !visited[i-1]) continue;
-                if (visited[i]) continue; 
+                if (visited[i]) continue;
                 visited[i] = true;
                 current.Add(nums[i]);
                 PermuteHelper(nums, result, current, visited);

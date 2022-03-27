@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// #AE #AlgoExpert #Clever use of extra space
+﻿// #AE #AlgoExpert #Clever use of extra space
 // Look at the video for "an image" of the solution. Look at the inner loops for right and left movement.
 
 namespace Leetcode

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// From Nick White
+﻿// From Nick White
 
 namespace Leetcode
 {

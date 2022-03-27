@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// Use this (2 graphs - 1 for prereqs and 1 for dependencies (create dependencies)) for mindmap instead of LC210
+﻿// Use this (2 graphs - 1 for prereqs and 1 for dependencies (create dependencies)) for mindmap instead of LC210
 
 namespace Leetcode
 {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-//Same as #LC31
+﻿//Same as #LC31
 //Used #Stack.ToArray()
 
 namespace Leetcode

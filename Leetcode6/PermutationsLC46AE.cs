@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #AE
+﻿// #AE
 // PermutationsLC46 is more generic and can be applied in Permuatation-II as well. Learn that.
 
 // 1,2,3 after for loop runs 3 times. i == j == 0. NO-OP.
@@ -14,8 +11,8 @@ namespace Leetcode
     {
         public IList<IList<int>> Permute(int[] nums)
         {
-            IList<IList<int>> result = new List<IList<int>>();            
-            PermuteHelper(0,nums,result);
+            IList<IList<int>> result = new List<IList<int>>();
+            PermuteHelper(0, nums, result);
             return result;
         }
 

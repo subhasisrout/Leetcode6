@@ -27,7 +27,7 @@ namespace Leetcode
             // After sorting, if the first num (biggest num) is 0, then it means all the nums are 0.
             // 00000000000
             if (strNums[0] == "0") return "0";
-            
+
             return sb.ToString();
 
         }

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #RememberPattern
+﻿// #RememberPattern
 
 namespace Leetcode
 {
@@ -20,7 +13,7 @@ namespace Leetcode
                 {
                     if (grid[i][j] == 1)
                     {
-                        max = Math.Max(max,DFS(grid, i, j));
+                        max = Math.Max(max, DFS(grid, i, j));
                     }
 
                 }

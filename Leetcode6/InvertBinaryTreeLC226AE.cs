@@ -2,10 +2,6 @@
 // Done using both Iterative approach using BFS/Level order traversal using a queue..
 // and recursive approach.
 
-
-using System;
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class InvertBinaryTreeLC226AE
@@ -27,7 +23,7 @@ namespace Leetcode
         public TreeNode InvertTree(TreeNode root)
         {
             Queue<TreeNode> q = new Queue<TreeNode>();
-            q.Enqueue(root);            
+            q.Enqueue(root);
             while (q.Count > 0)
             {
                 TreeNode node = q.Dequeue();

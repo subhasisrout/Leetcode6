@@ -1,16 +1,13 @@
 ﻿// #SlidingWindow pattern
 // #RememberPattern
 
-using System;
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class LongestSubstringWithoutRepeatingCharsLC3
     {
         // Below pattern is easy and intuitive
         public int LengthOfLongestSubstring(string s)
-        { 
+        {
             int l = 0, r = 0, maxLen = 0;
             HashSet<char> set = new HashSet<char>();
             while (r < s.Length)

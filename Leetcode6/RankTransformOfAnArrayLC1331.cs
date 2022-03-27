@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// #RememberPattern
+﻿// #RememberPattern
 // #Array copy/clone
 
 namespace Leetcode

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// Use the technique explained in AlgoExpert i.e Handling directionUP and directionDOWN.
+﻿// Use the technique explained in AlgoExpert i.e Handling directionUP and directionDOWN.
 
 // FindDiagonalOrderEasy taken from https://leetcode.com/problems/diagonal-traverse/discuss/581868/Easy-Python-NO-DIRECTION-CHECKING
 // very intuitive
@@ -40,7 +38,7 @@ namespace Leetcode
                 else
                 {
                     var list = diagonalMap[key];
-                    for (int i = 0; i < list.Count ; i++)
+                    for (int i = 0; i < list.Count; i++)
                     {
                         result.Add(list[i]);
                     }
@@ -51,7 +49,7 @@ namespace Leetcode
         }
 
 
-            public int[] FindDiagonalOrderToughToRemember(int[][] mat)
+        public int[] FindDiagonalOrderToughToRemember(int[][] mat)
         {
             int rows = mat.Length;
             int cols = mat[0].Length;

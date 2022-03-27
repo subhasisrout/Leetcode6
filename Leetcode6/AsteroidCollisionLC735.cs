@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class AsteroidCollisionLC735
     {
@@ -39,7 +33,7 @@ namespace Leetcode
                 i++;
             }
             int[] output = new int[stack.Count];
-            for (int k = stack.Count-1; k >= 0; k--)
+            for (int k = stack.Count - 1; k >= 0; k--)
             {
                 output[k] = stack.Pop();
             }

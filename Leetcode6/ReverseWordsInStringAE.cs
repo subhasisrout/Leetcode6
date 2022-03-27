@@ -19,7 +19,7 @@ namespace Leetcode
                 {
                     j--;
                 }
-                result.Append(ConstructWord(str, i, j+1)); // both inclusive
+                result.Append(ConstructWord(str, i, j + 1)); // both inclusive
                 int spaceCounter = 0;
                 while (j >= 0 && str[j] == ' ')//iterate through spaces
                 {

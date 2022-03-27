@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Idea taken from "Kenny talks code" - https://www.youtube.com/watch?v=vu7Tbpv0H18
+﻿// Idea taken from "Kenny talks code" - https://www.youtube.com/watch?v=vu7Tbpv0H18
 
 namespace Leetcode
 {

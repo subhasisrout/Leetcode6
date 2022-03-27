@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class FlipImageLC832
     {
@@ -17,7 +11,7 @@ namespace Leetcode
 
                 while (u <= v)
                 {
-                    if (A[i][u] == A[i][v] && u!=v)
+                    if (A[i][u] == A[i][v] && u != v)
                     {
                         A[i][u] = A[i][u] ^ 1;
                         A[i][v] = A[i][v] ^ 1;

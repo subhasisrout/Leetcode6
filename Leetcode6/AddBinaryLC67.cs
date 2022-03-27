@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 
 namespace Leetcode
 {
@@ -16,7 +15,7 @@ namespace Leetcode
             while (len1 > 0 || len2 > 0)
             {
                 if (len1 > 0 && len2 > 0)
-                    partialResult = (a[len1 - 1] - '0') + (b[len2 - 1] -'0') + carry;
+                    partialResult = (a[len1 - 1] - '0') + (b[len2 - 1] - '0') + carry;
                 else if (len1 > 0)
                     partialResult = (a[len1 - 1] - '0') + carry;
                 else if (len2 > 0)

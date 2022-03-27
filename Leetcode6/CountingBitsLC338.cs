@@ -19,7 +19,7 @@ namespace Leetcode
             int[] rec = new int[n + 1];
             for (int i = 1; i <= n; i++)
             {
-              //rec[6] = rec[3] + (lastDigit)
+                //rec[6] = rec[3] + (lastDigit)
                 rec[i] = rec[i >> 1] + (i & 1);
             }
             return rec;

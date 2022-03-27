@@ -1,6 +1,4 @@
-﻿using System;
-
-// #Rotated #Recurive #Self solution by me from scratch
+﻿// #Rotated #Recurive #Self solution by me from scratch
 // Write the iterative solution for the same.
 
 namespace Leetcode

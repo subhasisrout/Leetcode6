@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-
-// #RememberPattern
+﻿// #RememberPattern
 // This is pretty much template code.
-
 
 namespace Leetcode
 {
@@ -25,7 +22,7 @@ namespace Leetcode
 
             // if you are using stringbuilder, you will have to remove it (last char) after calling backtrack.
             // not needed for string as string are immutable and new string is created with appended "(", but the original string is unchanged. so no removal required.
-            if (open < max) BackTrack(result, curr + "(", open + 1, close, max); 
+            if (open < max) BackTrack(result, curr + "(", open + 1, close, max);
             if (close < open) BackTrack(result, curr + ")", open, close + 1, max);
         }
     }

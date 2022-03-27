@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-
-// To understand the comment "not the last entry, but the MAX value."
+﻿// To understand the comment "not the last entry, but the MAX value."
 // Dry Run [1,1,2,2,2]. Remove(1) Remove(1). and check state.
 
 namespace Leetcode

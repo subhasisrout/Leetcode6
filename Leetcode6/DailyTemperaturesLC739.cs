@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #Stack #MonotonicStack
+﻿// #Stack #MonotonicStack
 // Inspired from Neetcode - https://www.youtube.com/watch?v=cTBiBSnjO3c
 
 namespace Leetcode

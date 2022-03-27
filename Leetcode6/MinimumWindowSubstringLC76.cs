@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #SlidingWindow
+﻿// #SlidingWindow
 // #RememberPattern
 // Leetcode solution is very intuitive. Check the concept of "DesirableWord".
 // Using the leetcode concept and intuition, I wrote the below code myself.

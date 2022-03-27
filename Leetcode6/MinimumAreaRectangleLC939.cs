@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-
-// #Clever #Maths 
+﻿// #Clever #Maths 
 // Approach - Find any diagonal say (\). Now look for its other pair i.e (/)
 
 namespace Leetcode

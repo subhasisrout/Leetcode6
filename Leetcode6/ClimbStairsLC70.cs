@@ -26,12 +26,12 @@ namespace Leetcode
                 return count;
 
             int sum = 0;
-            ClimbStairsUtil(n,ref count, sum);
+            ClimbStairsUtil(n, ref count, sum);
             return count;
 
         }
 
-        private void ClimbStairsUtil(int n,ref int count, int sum)
+        private void ClimbStairsUtil(int n, ref int count, int sum)
         {
             if (sum == n)
             {

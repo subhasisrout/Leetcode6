@@ -1,6 +1,4 @@
-﻿using System;
-
-// #RememberPattern
+﻿// #RememberPattern
 
 namespace Leetcode
 {

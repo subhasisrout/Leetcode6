@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-// #DFS #Graph
+﻿// #DFS #Graph
 namespace Leetcode
 {
     public class PartitionEqualSubsetSumLC416
@@ -40,7 +35,7 @@ namespace Leetcode
                 CanPartitionHelper(nums, index + 1, total, sum);
         }
 
-        private bool CanPartitionHelperWithMemoization(int[] nums, int index, int total, int sum, Dictionary<string,bool> map)
+        private bool CanPartitionHelperWithMemoization(int[] nums, int index, int total, int sum, Dictionary<string, bool> map)
         {
             string current = index + "-" + total;
             if (map.ContainsKey(current))

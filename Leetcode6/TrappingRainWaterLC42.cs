@@ -1,8 +1,6 @@
 ﻿// Excellent solution and explanation in GoodTecher https://www.youtube.com/watch?v=wz00uI9mDXA
 // #TrickySolution
 
-using System;
-
 namespace Leetcode
 {
     public class TrappingRainWaterLC42

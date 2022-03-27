@@ -11,7 +11,7 @@ namespace Leetcode
         {
             if (headA == null || headB == null)
                 return null;
-            
+
             int lenA = 0;
             int lenB = 0;
             ListNode ha = headA, hb = headB;

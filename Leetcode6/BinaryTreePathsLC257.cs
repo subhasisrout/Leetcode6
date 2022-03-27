@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class BinaryTreePathsLC257
     {
@@ -19,7 +12,7 @@ namespace Leetcode
 
             return paths;
         }
-        private void DFS(TreeNode root,string path, IList<string> paths)
+        private void DFS(TreeNode root, string path, IList<string> paths)
         {
             path += root.val.ToString();
 

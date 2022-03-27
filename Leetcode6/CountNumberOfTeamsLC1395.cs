@@ -1,8 +1,6 @@
 ﻿// #Pending. DP solution
 // Most intuitive n^2 solution - https://leetcode.com/problems/count-number-of-teams/discuss/555441/JavaC%2B%2B-100-O(N2)-Easy-To-Understand-With-Explanation
 
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class CountNumberOfTeamsLC1395

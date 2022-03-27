@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #2D Array
+﻿// #2D Array
 // #MaxOfEachRowAndCol
 // Similar to MatrixLuckyNumberLC1380 but there the result is in a HashSet.
 

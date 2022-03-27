@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// #Clever #Different from 3Sum 4Sum.
+﻿// #Clever #Different from 3Sum 4Sum.
 // #Inspired from https://leetcode.com/problems/4sum-ii/discuss/93920/Clean-java-solution-O(n2)
 /* Explaination https://leetcode.com/problems/4sum-ii/discuss/93917/Easy-2-lines-O(N2)-Python/319700
  * We add up a and b and store the result-frequency pair into AB.
@@ -9,7 +7,6 @@ AB[5] = 2 means a+b=5 appears 2 times in the a+b scenario.
 Then we are looking for how many times does c+d = -5 appear so that it could be paired with AB[5] and form a 0.
 That's why we then look for AB[-c-d] (or AB[-(c+d)] )
  */
-
 
 namespace Leetcode
 {

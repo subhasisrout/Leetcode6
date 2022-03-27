@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #DP
+﻿// #DP
 // Excellent explaination and intuition in https://www.youtube.com/watch?v=aUE5EgqZkb0
 
 namespace Leetcode
@@ -12,7 +6,7 @@ namespace Leetcode
     public class MinimumCostsForTicketsLC983
     {
         public int MincostTickets(int[] days, int[] costs) // days 1,3,4,9,35
-        {                                                   
+        {
             int maxDate = days[days.Length - 1]; //days are sorted. maxDate = 35
             int[] dp = new int[maxDate + 1]; //dp[] length 36
             HashSet<int> set = new HashSet<int>();

@@ -1,6 +1,4 @@
-﻿using System;
-
-// #Clever 
+﻿// #Clever 
 // Solution taken from Leetcode discussion  https://leetcode.com/problems/maximum-product-subarray/discuss/183483/JavaC%2B%2BPython-it-can-be-more-simple
 
 /* Explaination
@@ -13,7 +11,6 @@ That's to say, when the prefix product is 0, we start over and compute prefix pr
 And this is exactly what A[i] *= (A[i - 1]) or 1 does
 
  */
-
 
 namespace Leetcode
 {

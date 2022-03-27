@@ -1,7 +1,5 @@
 ﻿// Similar to #Leetcode #LC489
 
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class ZigzagTraverseAE
@@ -20,7 +18,7 @@ namespace Leetcode
             int i = 0;
             int j = 0;
 
-            List<int> output = new List<int>();            
+            List<int> output = new List<int>();
 
             output.Add(array[i][j]); //[1]
             i++;
@@ -45,7 +43,7 @@ namespace Leetcode
                         j++;
                         currToBeMoved = -1;
                         continue;
-                    }                    
+                    }
                     i--;
                     j++;
                 }

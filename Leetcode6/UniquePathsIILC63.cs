@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-// #DP
+﻿// #DP
 namespace Leetcode
 {
     public class UniquePathsIILC63
@@ -63,7 +58,7 @@ namespace Leetcode
 
             int totalCount = 0;
             //no need to add < 0 as we are only incrementing in DFS recursion. Check comment/base condition of LC62
-            if (i == obstacleGrid.Length - 1 && j == obstacleGrid[0].Length - 1) 
+            if (i == obstacleGrid.Length - 1 && j == obstacleGrid[0].Length - 1)
                 return 1;
 
 

@@ -1,11 +1,4 @@
-﻿using PriorityQueueFromCodeProject;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class KClosestPointsToOriginLC973
     {
@@ -15,7 +8,7 @@ namespace Leetcode
             int distanceSquared = 0;
             int[] point = new int[2];
             PriorityQueueFromCodeProject.PriorityQueue<int, int[]> minHeap = new PriorityQueueFromCodeProject.PriorityQueue<int, int[]>(point.Length, new IntComparer());
-            for(int i = 0; i < points.Length; i++)
+            for (int i = 0; i < points.Length; i++)
             {
                 distanceSquared = 0;
                 point = new int[2];

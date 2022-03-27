@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class AmazonOA
     {
@@ -20,7 +14,7 @@ namespace Leetcode
                 while (idx <= rank.Count - k)
                 {
                     curr = new List<int>();
-                    for (int i = idx; i < (k+idx); i++)
+                    for (int i = idx; i < (k + idx); i++)
                     {
                         curr.Add(rank[i]);
                     }
@@ -56,8 +50,8 @@ namespace Leetcode
         }
         void dfsAndBackTrack(int index, List<int> nums, List<int> current, IList<IList<int>> allGroups, Dictionary<int, int> rankPosMap)
         {
-            allGroups.Add(new List<int>(current)); 
-            for (int i = index; i < nums.Count; i++) 
+            allGroups.Add(new List<int>(current));
+            for (int i = index; i < nums.Count; i++)
             {
                 if (current.Count > 0 && rankPosMap[nums[i]] - rankPosMap[current[current.Count - 1]] > 1) continue;
                 current.Add(nums[i]);

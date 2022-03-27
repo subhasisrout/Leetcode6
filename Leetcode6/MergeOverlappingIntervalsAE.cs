@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Below solution is elegant and is from #AlgoExpert #AE
+﻿// Below solution is elegant and is from #AlgoExpert #AE
 // #Leetcode #LC56
 
 namespace Leetcode
@@ -32,5 +29,5 @@ namespace Leetcode
             return result.ToArray();
         }
     }
-    
+
 }

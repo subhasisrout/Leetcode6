@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #LIS . Note this is longest increasing subsequence SUM. There is another variant which is longest increasing subsequence (length).
+﻿// #LIS . Note this is longest increasing subsequence SUM. There is another variant which is longest increasing subsequence (length).
 // #LC300
 
 // #Sorting using lambda.

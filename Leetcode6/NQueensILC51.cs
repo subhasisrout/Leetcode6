@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 // Really we are getting a list of allowed column values [1,3,0,2] and [2,0,3,1] with the index being the row. #LC52
 // 3 Helper methods - GetDefaultBoard -> OverlayOutputOnDefaultBoard -> ConvertOutputToStringRepresentation
@@ -20,7 +16,7 @@ namespace Leetcode
         {
             IList<IList<int>> output = new List<IList<int>>();
             RecurseAndBackTrack(output, 0, n);
-            IList<IList<string>> result = ConvertOutputToStringRepresentation(output,n);
+            IList<IList<string>> result = ConvertOutputToStringRepresentation(output, n);
             return result;
         }
 
@@ -62,7 +58,7 @@ namespace Leetcode
                 int col = output[row];
                 StringBuilder sb = new StringBuilder(defaultBoard[row]);
                 sb[col] = 'Q';
-                defaultBoard[row] = sb.ToString(); 
+                defaultBoard[row] = sb.ToString();
             }
             return defaultBoard;
         }

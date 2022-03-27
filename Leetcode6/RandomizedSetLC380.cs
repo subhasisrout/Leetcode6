@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #RememberPattern
+﻿// #RememberPattern
 // #ingenious way to use list.RemoveAt(idx) in O(1) operation
 
 namespace Leetcode
@@ -35,7 +29,7 @@ namespace Leetcode
                 return false;
             var idx = map[val]; //to be removed
             var lastval = list[list.Count - 1]; //remove and put in above pos.        
-            
+
             // Below 2 lines update list and map
             list[idx] = lastval;
             map[lastval] = idx;

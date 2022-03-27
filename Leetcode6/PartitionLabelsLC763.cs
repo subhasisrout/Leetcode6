@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class PartitionLabelsLC763
     {
@@ -20,12 +14,12 @@ namespace Leetcode
                 lastIndices[arrChar[i] - 'a'] = i;
             }
 
-            int start = 0;           
+            int start = 0;
             while (start < S.Length)
             {
                 int end = lastIndices[arrChar[start] - 'a'];
                 int intermediateLengthCounter = start;
-                
+
                 while (intermediateLengthCounter != end)
                 {
                     end = Math.Max(lastIndices[arrChar[intermediateLengthCounter] - 'a'], end);
@@ -34,7 +28,7 @@ namespace Leetcode
                 result.Add(end - start + 1);
                 start = end + 1;
             }
-            
+
             return result;
         }
     }

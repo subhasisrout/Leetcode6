@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     public class MergeKSortedListLC23
     {
@@ -13,14 +7,14 @@ namespace Leetcode
             if (lists == null || lists.Count() == 0)
                 return null;
 
-            ListNode finalList = null;           
-            int listIndexHavingMinVal = 0;            
+            ListNode finalList = null;
+            int listIndexHavingMinVal = 0;
             while (true)
             {
                 bool nodePresentForTraversal = false;
                 int minimum = int.MaxValue;
                 for (int i = 0; i < lists.Length; i++)
-                {                    
+                {
                     if (lists[i] != null && lists[i].val <= minimum)
                     {
                         minimum = lists[i].val;
@@ -41,7 +35,7 @@ namespace Leetcode
                         tmp = tmp.next;
                     tmp.next = new ListNode(lists[listIndexHavingMinVal].val);
                 }
-                lists[listIndexHavingMinVal] = lists[listIndexHavingMinVal].next;                
+                lists[listIndexHavingMinVal] = lists[listIndexHavingMinVal].next;
             }
             return finalList;
 

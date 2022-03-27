@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// #TopInterviewQues
+﻿// #TopInterviewQues
 
 namespace Leetcode
 {

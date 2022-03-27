@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-// Excellent intuition from Pepcoding https://www.youtube.com/watch?v=2NaaM_z_Jig
+﻿// Excellent intuition from Pepcoding https://www.youtube.com/watch?v=2NaaM_z_Jig
 // #DP dp[i] contains the number of sentences that can be formed.
 // for a given 'i', check if the suffixes are present in the dictionary.
 
@@ -37,7 +35,7 @@ namespace Leetcode
                 }
             }
             return dp[dp.Length - 1] > 0;
-        
+
         }
     }
 }

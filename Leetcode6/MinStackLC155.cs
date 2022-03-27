@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-
-// # Implementation using LinkedList as well as inbuilt stack (with another stack<int[]>)
+﻿// # Implementation using LinkedList as well as inbuilt stack (with another stack<int[]>)
 
 namespace Leetcode2
 {
@@ -12,7 +8,7 @@ namespace Leetcode2
         /** initialize your data structure here. */
         public MinStack()
         {
-            
+
         }
 
         public void Push(int val)
@@ -53,7 +49,7 @@ namespace Leetcode2
             this.min = min;
         }
 
-        
+
     }
 
     public class MinStack2
@@ -70,14 +66,14 @@ namespace Leetcode2
         public void Push(int number)
         {
             if (stack.Count == 0)
-            {                
+            {
                 minMaxStack.Push(new int[] { number, number }); // 0th index is min and 1st index is max
-            }    
+            }
             else
             {
                 var currentMin = minMaxStack.Peek()[0];
                 var currentMax = minMaxStack.Peek()[1];
-                minMaxStack.Push(new int[] {Math.Min(number,currentMin), Math.Max(number,currentMax) });
+                minMaxStack.Push(new int[] { Math.Min(number, currentMin), Math.Max(number, currentMax) });
             }
             stack.Push(number);
         }

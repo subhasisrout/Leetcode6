@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// #AlgoExpert #AE
+﻿// #AlgoExpert #AE
 // Learn the bottom-up approach. Note dp[] is initialized to amount+1, it fails with +ve Infinity.
 // for amount 3 and coin[] {2}, when i=3 - you get 1 + dp[3 - 2] => 1 + dp[1] => 1 + +veInfy (overflow).
 // Hence return dp[amount] > amount ? -1 : dp[amount]; and NOT dp[amount] == (amount + 1)

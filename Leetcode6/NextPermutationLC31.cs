@@ -1,9 +1,5 @@
-﻿using System;
-
-// #Array subset Reverse
+﻿// #Array subset Reverse
 // Inspired from https://www.geeksforgeeks.org/find-next-greater-number-set-digits/ and Leetcode solution
-
-
 
 namespace Leetcode
 {

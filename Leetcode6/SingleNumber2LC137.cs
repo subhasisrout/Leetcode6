@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-// Excellent solution with intuition at https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx/176039 (comment thread copied)
+﻿// Excellent solution with intuition at https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx/176039 (comment thread copied)
 
 /*
  * IF the set "ones" does not have A[i]

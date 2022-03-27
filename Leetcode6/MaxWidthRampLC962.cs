@@ -1,9 +1,6 @@
 ﻿// #TODO Absorb intuition
 // #Looks like a pattern
 
-using System;
-using System.Collections.Generic;
-
 namespace Leetcode
 {
     public class MaxWidthRampLC962

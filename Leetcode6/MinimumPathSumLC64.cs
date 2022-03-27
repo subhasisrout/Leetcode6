@@ -1,6 +1,4 @@
-﻿using System;
-
-// #DP
+﻿// #DP
 
 namespace Leetcode
 {
@@ -17,7 +15,7 @@ namespace Leetcode
             {
                 for (int j = 0; j < grid[0].Length; j++)
                 {
-                    dpArray[i,j] = grid[i][j];
+                    dpArray[i, j] = grid[i][j];
 
                     if (i > 0 && j > 0)
                         dpArray[i, j] += Math.Min(dpArray[i - 1, j], dpArray[i, j - 1]);
@@ -29,7 +27,7 @@ namespace Leetcode
 
             }
 
-            return dpArray[grid.Length-1, grid[0].Length-1];
+            return dpArray[grid.Length - 1, grid[0].Length - 1];
         }
     }
 }

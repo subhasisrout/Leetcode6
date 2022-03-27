@@ -1,7 +1,4 @@
-﻿using System;
-
-// #Helper method creation helps
-
+﻿// #Helper method creation helps
 
 namespace Leetcode
 {

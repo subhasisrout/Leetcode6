@@ -5,7 +5,7 @@ namespace Leetcode
 {
     public class CorpFlightBookingsLC1109
     {
-        
+
         public int[] CorpFlightBookings(int[][] bookings, int n)
         {
             int[] result = new int[n];
@@ -17,7 +17,7 @@ namespace Leetcode
 
             return result;
         }
-        private void GetNumOfPersons(int i,int j, int k, int[] result)
+        private void GetNumOfPersons(int i, int j, int k, int[] result)
         {
             for (int idx = i; idx <= j; idx++)
             {

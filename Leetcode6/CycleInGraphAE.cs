@@ -9,20 +9,20 @@ namespace Leetcode
         public bool CycleInGraph(int[][] edges)
         {
             int numOfVertices = edges.Length;
-            bool[] visited = new bool[numOfVertices]; 
+            bool[] visited = new bool[numOfVertices];
             bool[] currentlyInStack = new bool[numOfVertices]; // Here "stack" is the recursion stack.
 
             // this loop is needed mainly for the disjoint nodes (forest)
             // otherwise because of DFS nature. calling IsCycleFound on one node will lead to another and so on. Only the disjoint ones will be left.
-            for (int node = 0; node < numOfVertices; node++) 
+            for (int node = 0; node < numOfVertices; node++)
             {
                 if (visited[node])
                     continue;
 
-                
+
                 var cycleFound = IsCycleFound(edges, node, visited, currentlyInStack);
                 if (cycleFound)
-                    return true;                
+                    return true;
             }
             return false;
         }

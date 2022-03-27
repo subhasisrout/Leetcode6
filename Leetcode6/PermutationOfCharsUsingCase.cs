@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq.Expressions;
-
-// #Backtrack
+﻿// #Backtrack
 // Basics for LC784
 
 namespace Leetcode
@@ -23,7 +20,7 @@ namespace Leetcode
                 return;
             DfsAndBacktrack(current + char.ToLower(letters[index]), result, letters, index + 1);
             DfsAndBacktrack(current + char.ToUpper(letters[index]), result, letters, index + 1);
-            
+
         }
     }
 }
