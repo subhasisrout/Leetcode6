@@ -1,0 +1,16 @@
+﻿// You are a making a scheduler which many number of cores (millions).
+// Implement AllocCore and DeallocCore methods, which are going to be called very frequently.
+// You can think of Core as an "integer".
+
+//Points to think - What data structure would you use to store the coreIds (integers) so that 
+//retrieving an available core from pool and returing back to the pool is efficient.
+
+public class Scheduler
+{
+	// constructor
+	public Scheduler(int totalCores) {
+	
+	}
+	public int AllocCore();
+	public void DeallocCore(int coreId);
+}

@@ -1,0 +1,146 @@
+Cheatsheet
+==========
+1. Backtracking
+	Permutations I & II. 
+		if visited then continue. Loop through all elements and backtrack by removing them and setting visited to false.	
+		In Permutation II use Dictionary instead of HashSet. Approach is same as above. But Loop through items in the dictionary.
+
+	Subsets I & II (Powerset)
+		startIdx is passed. Add to result, no matter what. Loop through all elements and backtrack by removing them.
+		Extra line in Subsets II is SORTING THE ARRAY + if (i > startIdx && nums[i] == nums[i-1]) continue;
+
+	CombinationSum I & II
+		Sort the candidates
+		startIdx is passed. Add to result, if targetSum == 0 and just return if targetSum < 0. Loop through all elements and backtrack by removing them. DONT pass i+1 in ComboSum1
+		Two things extra in ComboSum2. if (i > startIdx && candidates[i] == candidates[i-1]) continue; ----- Pass i+1 in recursion, as you cannot reuse the same element twice.
+		
+
+
+2. Two pointer / Greedy
+	Container with most water
+	Boats to save people
+	.	
+	.<Add more as you see>
+	.
+		i=0, j=len-1, Compute and either do i++ or j-- or both (as in boats problem).
+
+
+3. Dynamic Programming
+	House Robber I && II
+		build dpArray. Use formula - Max(dp[i-1],dp[i-2] + nums[i])
+		House Robber II - Do above twice from (0 to second last element) and (1 to last element). Take Max of the two.
+		While doing (1 to last element), DO NOT MESS UP THE INDEX for nums. dp[i] = Math.Max(dp[i - 1], dp[i - 2] + nums[i + 1]); //note i+1 for nums. Try to visualize.
+
+	Coin Change 1 and 2. Big difference between the two problem. Always initialize dp[] to amount+1 size. 
+		In CC1, initialize to amt+1, dp[0]=1 ,outer loop is for amount, you fill dp[] using Min(..,dp[i-coins[j]]).. return -1 if dp[last]>amt
+		In CC2, dp[0] = 1, outerloop is coins[], fill dp[] everytime.
+
+	Longest Increasing SubSequence (LIS) LC300. Another variant LIS-MaxSum LC1626 
+
+	Min Costs for Ticket LC 983. dp[] length is maxDate + 1, use set for days, Min of - c1 + c(0), c2 + c(1), c3 + c2(2) - if present in set else dp[i] = dp[i-1]
+
+	Unique Paths 1 and 2. In Unique Paths 1, you do dp[i-1,j] + dp[i, j-1]. In Unique Paths 2, there are 2 differences - 
+		diff 1 - while setting dp[] arr for first row and first col, you set 1's until you hit a blocker, then you break (use intuition)
+		diff 2 - in the double for loops, you check for obstacle while applying reccurence formula - else set dp[i][j] to 0.
+
+	Knapsack problem
+		0/1 knapsack, where you can pick the item at max, once only - solved using 2d array dp[items.Length+1][capacity+1]
+		Unbounded knapsack, where you can pick any item any number of times - solved using 1d array dp[capacity+1].
+			Another variant of unbounded KS- Coin Change 2. LC518
+
+
+4. Intervals
+	Merge Intervals / Merge Overlapping intervals. LC56
+		Sort by startTime. You either add to result or update the last entry endTime of result.
+		Add - If item's start is strictly greater than lastelement's endTime
+		ELSE - Update the endtime - Use Math.Max(item's endTime, lastElement endTime)
+
+	Add/Insert Interval
+		One naive solution is - Add the newInterval to the list and use "Merge Interval"
+		Smart solution (3 flat while loops)
+			- add all the intervals before the newInterval starts
+			- Merge by setting newIntervalStart and EndTime. Expand the newInterval by updating EndTime and compare newIntervalEndTime in the loop.
+			- add all the intervals after the newInterval-MERGED ends
+
+	Non overlapping intervals
+		Sort by endTime because you want to greedily pick the intervals which ends soon so as to accomodate more intervals (or remove less intervals)
+		Loop through all intervals and update closingTime, if the startTime is >= closingTime, 
+		else there is a clash, so increase count.
+
+
+5. Merge Sort / Merge List category (solved in 1 bunch)
+		MergeSortAE.cs  (mid = len/2. left = arr.Take(mid).ToArray()... arr.Skip(mid).ToArray()... In Merge method (i < len1 && j < len2)... then while (arr1) and while (arr2))
+		MergeSortedListLC21.cs (Kevin's version)
+		MiddleOfLinkedListLC876.cs (using fast/slow/prev ptr. prev.next = null to CUT OFF the list.return slow)
+		SortListLC148.cs (solved using LC21 + LC876 and approach of MergeSortAE)
+
+6. Bits/Binary
+		Number of 1 bits (just refer notes)
+		Count the number of bits (just refer notes)
+
+
+7. Graph / AdjList
+			Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+			for (int i = 0; i < n; i++)
+			{
+				graph.Add(i, new List<int>());
+			}
+            for (int i = 0; i < trust.Length; i++)
+            {
+                var curr = trust[i];
+                
+				// Below IF clauses are not needed because of the above for-loop
+				// if (!graph.ContainsKey(curr[0])) graph.Add(curr[0], new List<int>());
+                // if (!graph.ContainsKey(curr[1])) graph.Add(curr[1], new List<int>()); for bidirectional graph
+
+                graph[curr[0]].Add(curr[1]);
+                graph[curr[1]].Add(curr[0]);  // for bidirectional graph
+            }
+
+
+
+8. Cyclic sort - if the range of numbers is fixed between [0..n] or [1..n], just use this. Write in pen and paper for each iteration.
+	This approach be used in variety of places. Examples
+	LC268, LC448, LC287, LC442, LC645, LC41
+	Idea taken from https://www.youtube.com/watch?v=JfinxytTYFQ
+
+	Another approach for these kind of problems is .. multiplying by -1.
+
+
+9. Binary Search
+	Position of first and last occurrence of a target. - Two times binary search. One for first occurence, one for second occurence.
+	Peak of Mountain array - clean code is while (start < end) not <=... start=mid+1 BUT end=mid :)
+	Search in rotated array - Both recursion and iterative are there. Advantage of iterative is - it can be used with slight modification in below.
+	Search in rotated array2 (with duplicates). while (start<=end) if (start==mid==end) start++,end--. else if (mid>=start)..if target in left, touching start.         else... if target in right, touching end.
+
+    Another flavor of Binary Search is when you need to try a range of numbers from min....max and checking ifValid(mid)
+	Example - Koko Eating Bananas LC875, MinDaysToMakeMBouquetsLC1482, SplitArrayLargestSumLC410
+
+10. Stack / Monotonic Stack Pattern.
+	a. Keep popping until you get an element > or < than the top of stack
+	b. Update result/some kind of array/map.
+	c. Push the element.
+	d. Example - LargestRectangleInHistogramLC84, DailyTemperaturesLC739, NextGreaterElementILC496, LC503, OnlineStockSpan LC901 
+	e. Note the circular version LC503 uses Pepcoding trick + AE trick 
+	f. This is the only difference in the circular LC503
+		for (int k=(nums.Length * 2) - 1; k>=0; k--) {
+            int i = k % nums.Length;
+
+
+
+
+
+
+	
+
+
+		
+
+
+
+
+
+
+
+
+			

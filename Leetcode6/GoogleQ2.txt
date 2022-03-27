@@ -1,0 +1,25 @@
+﻿Below is a IList<string>
+[
+	/apps/components/batch/index.html
+	/apps/components/language/index.html
+	/logs/abc/1.txt
+	/apps/runtime/system/abc.jar
+	/logs/xyz/2.txt
+]
+
+Display the above file system in the following way - 
+
+apps
+	components
+		batch
+			index.html
+		language
+			index.html
+	runtime
+		system
+			abc.jar
+logs
+	abc
+		1.txt
+	xyz
+		2.txt
