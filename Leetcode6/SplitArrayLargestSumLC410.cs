@@ -7,51 +7,48 @@ namespace Leetcode
     {
         public int SplitArray(int[] nums, int m)
         {
-            int max = 0;
-            int sum = 0;
+            int l = 0;
+            int r = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                max = Math.Max(nums[i], max);
-                sum += nums[i];
+                r += nums[i];
+                l = Math.Max(l, nums[i]);
             }
+            int result = r;
 
-            if (m == 1) return sum;
-
-            // binary search
-            int start = max;
-            int end = sum;
-
-            while (start <= end)
+            // Binary Search with left as MAX(array) and right as SUM(array)
+            while (l <= r)
             {
-                int mid = start + (end - start) / 2;
-                if (IsValid(mid, nums, m))
+                int mid = l + (r - l) / 2;
+                if (IsValid(mid))
                 {
-                    end = mid - 1;
+                    result = mid;
+                    r = mid - 1;
                 }
                 else
                 {
-                    start = mid + 1;
+                    l = mid + 1;
                 }
             }
-            return start;
-        }
+            return result;
 
-        private bool IsValid(int target, int[] nums, int m)
-        {
-            int total = 0;
-            int count = 1;
-            for (int i = 0; i < nums.Length; i++)
+            bool IsValid(int largest)
             {
-                total += nums[i];
-                if (total > target)
+                int subArrays = 0;
+                int currSum = 0;
+                for (int i = 0; i < nums.Length; i++)
                 {
-                    total = nums[i];
-                    count++;
-                    if (count > m)
-                        return false;
+                    currSum += nums[i];
+                    if (currSum > largest)
+                    {
+                        subArrays++;
+                        currSum = nums[i];
+                        if (subArrays + 1 > m)
+                            return false;
+                    }
                 }
+                return true;
             }
-            return true;
 
         }
     }
