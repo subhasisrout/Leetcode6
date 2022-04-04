@@ -1,13 +1,15 @@
-﻿using Leetcode6;
-
-namespace Leetcode
+﻿namespace Leetcode
 {
     class Program
     {
         static void Main(string[] args)
         {
-            LongestHappyStringLC1405 longestHappyStringLC1405 = new LongestHappyStringLC1405();
-            Console.WriteLine(longestHappyStringLC1405.LongestDiverseString(1, 1, 7));
+
+            GroupAnagramsLC49 groupAnagramsLC49 = new GroupAnagramsLC49();
+            var tmp = groupAnagramsLC49.GroupAnagrams(new string[] { "bdddddddddd", "bbbbbbbbbbc" });
+
+            //LongestHappyStringLC1405 longestHappyStringLC1405 = new LongestHappyStringLC1405();
+            //Console.WriteLine(longestHappyStringLC1405.LongestDiverseString(1, 1, 7));
 
             //AmazonOA amazonOA = new AmazonOA();
             //var result = amazonOA.findTotalImbalance(new List<int> { 4, 1, 3, 2 }); 
@@ -340,9 +342,6 @@ namespace Leetcode
 
             //LargestValuesFromLabelLC1090 largestValuesFromLabelLC1090 = new LargestValuesFromLabelLC1090();
             //var r = largestValuesFromLabelLC1090.LargestValsFromLabels(new int[] { 5, 4, 3, 2, 1 }, new int[] { 1, 1, 2, 2, 3 }, 3, 1);
-
-            //GroupAnagramsLC49 groupAnagramsLC49 = new GroupAnagramsLC49();
-            //var tmp = groupAnagramsLC49.GroupAnagrams(new string[] {"ate","eat","abc","tea","ball","bat","tab" });
 
             //ValidAnagramLC242 validAnagramLC242 = new ValidAnagramLC242();
             //Console.WriteLine(validAnagramLC242.IsAnagram("eat","ate"));

@@ -6,40 +6,43 @@ namespace Leetcode
     {
         public IList<IList<string>> GroupAnagrams(string[] strs)
         {
+            //START - this approach is just to find if 2 words are same. abcba will be represented as 22100000000000.
+            //The other alternative is to sort the word, which is more expensive.
+
             Dictionary<string, List<string>> map = new Dictionary<string, List<string>>();
+            int[] chars = null;
             for (int i = 0; i < strs.Length; i++)
             {
-                string currentWord = strs[i];
-
-                //START - this approach is just to find if 2 words are same. abcba will be represented as 22100000000000.
-                //The other alternative is to sort the word, which is more expensive.
-                char[] currCharArray = currentWord.ToCharArray();
-                int[] numArr = new int[26];
-                for (int j = 0; j < currCharArray.Length; j++)
+                chars = new int[26];
+                StringBuilder sbChars = new StringBuilder();
+                string strChars = "";
+                var word = strs[i];
+                for (int k = 0; k < word.Length; k++)
                 {
-                    numArr[currCharArray[j] - 'a'] = numArr[currCharArray[j] - 'a'] + 1;
+                    chars[word[k] - 'a'] = chars[word[k] - 'a'] + 1;
                 }
-                StringBuilder sb = new StringBuilder();
-                for (int j = 0; j < numArr.Length; j++)
+                for (int k = 0; k < 26; k++)
                 {
-                    sb.Append(numArr[j]);
+                    sbChars.Append(chars[k]);
+                    sbChars.Append(','); //some kind of delim is needed for case like - "bdddddddddd", "bbbbbbbbbbc"
+                    //010100000000....010100000 (You can see both words would be same without delim)
                 }
-                string currWordUnique = sb.ToString();
-                //END
+                strChars = sbChars.ToString();
 
 
-                if (!map.ContainsKey(currWordUnique))
-                    map.Add(currWordUnique, new List<string>());
-
-                map[currWordUnique].Add(currentWord);
+                if (!(map.ContainsKey(strChars)))
+                    map.Add(strChars, new List<string>());
+                map[strChars].Add(word);
             }
 
-            IList<IList<string>> output = new List<IList<string>>();
-            foreach (var item in map.Values)
+
+            IList<IList<string>> result = new List<IList<string>>();
+            foreach (var kv in map)
             {
-                output.Add(item);
+                result.Add(kv.Value);
             }
-            return output;
+
+            return result;
         }
 
         // Below is a self written 4 line solution (using helper method to return charfreqsortedbykey like a1e1t1)
