@@ -7,30 +7,44 @@ namespace Leetcode
     {
         public int NextGreaterElement(int n)
         {
-            int[] nums = IntToDigitArray(n);
-            if (nums.Length == 1) return -1;
-            int i = -1;
-            for (int k = nums.Length - 1; k >= 0; k--)
-            {
-                if (k > 0 && nums[k - 1] < nums[k])
-                {
-                    i = k;
-                    break;
-                }
-            }
+            int[] nums = NumToDigits(n);
 
-            if (i == -1)
-            { //nums array is sorted descending. So next permutation not possible.
+
+            int first = nums.Length - 1;
+            while (first >= 1 && nums[first - 1] >= nums[first])
+            {
+                first--;
+            }
+            if (first == 0)
+            {
+                //Array.Reverse(nums);
                 return -1;
             }
+            first--;
 
-            int j = FindSmallestNumIndexInRightWhichIsGreaterThan(nums, i);
-            Swap(nums, i - 1, j);
-            Array.Reverse(nums, i, nums.Length - i);
-            return DigitArrayToInt(nums);
+            int second = nums.Length - 1;
+            while (second > first && nums[second] <= nums[first])
+            {
+                second--;
+            }
 
+            //Swap nums[first] and nums[second]
+            Swap(nums, first, second);
+
+            //Reverse substring between second and len-1 idx (inclusive)
+            /*
+            int i1 = first+1;
+            int j1 = nums.Length - 1;
+            while (i1 < j1){
+                Swap(nums,i1,j1);
+                i1++;
+                j1--;
+            }*/
+            Array.Reverse(nums, first + 1, nums.Length - 1 - (first + 1) + 1);
+
+            return DigitsToNum(nums);
         }
-        private int[] IntToDigitArray(int n)
+        private int[] NumToDigits(int n)
         {
             Stack<int> stack = new Stack<int>();
             while (n > 0)
@@ -41,32 +55,20 @@ namespace Leetcode
             }
             return stack.ToArray();
         }
-        private int DigitArrayToInt(int[] digits)
+        private static int DigitsToNum(int[] digits)
         {
-            double n = 0;
+            double num = 0;
             int k = 0;
             for (int i = digits.Length - 1; i >= 0; i--)
             {
-                n += digits[i] * Math.Pow(10, k);
+                num += digits[i] * Math.Pow(10, k);
                 k++;
             }
-            if (n > Int32.MaxValue) return -1;
-            return Convert.ToInt32(n);
+            if (num > Int32.MaxValue) return -1;
+            return Convert.ToInt32(num);
         }
-        private int FindSmallestNumIndexInRightWhichIsGreaterThan(int[] nums, int i)
-        {
-            int smallest = nums[i];
-            int smallestIdx = i;
-            for (int k = i; k < nums.Length; k++)
-            {
-                if (nums[k] <= smallest && nums[k] > nums[i - 1])
-                {
-                    smallest = nums[k];
-                    smallestIdx = k;
-                }
-            }
-            return smallestIdx;
-        }
+
+
         private void Swap(int[] nums, int i, int j)
         {
             int tmp = nums[i];

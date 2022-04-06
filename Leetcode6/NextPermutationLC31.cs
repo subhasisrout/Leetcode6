@@ -1,11 +1,51 @@
 ﻿// #Array subset Reverse
 // Inspired from https://www.geeksforgeeks.org/find-next-greater-number-set-digits/ and Leetcode solution
 
+// NextPermutation as opposed to NextPermutation2 is inspired from "Coding Decoded". Note the simplicity
+// It does not uses any helper method. Just 'first' and 'second' pointer. Note the Array reverse is also implemented
+// using 2 pointers (i++,j--).
+
 namespace Leetcode
 {
     public class NextPermutationLC31
     {
+
         public void NextPermutation(int[] nums)
+        {
+            int first = nums.Length - 1;
+            while (first >= 1 && nums[first - 1] >= nums[first])
+            {
+                first--;
+            }
+            if (first == 0)
+            {
+                Array.Reverse(nums);
+                return;
+            }
+            first--;
+
+            int second = nums.Length - 1;
+            while (second > first && nums[second] <= nums[first])
+            {
+                second--;
+            }
+
+            //Swap nums[first] and nums[second]
+            Swap(nums, first, second);
+
+            //Reverse substring between first+1 and len-1/last idx (inclusive)
+            // The below block is equivalent to Array.Reverse(nums, first+1, nums.Length - 1 - (first + 1) + 1);
+            int i1 = first + 1;
+            int j1 = nums.Length - 1;
+            while (i1 < j1)
+            {
+                Swap(nums, i1, j1);
+                i1++;
+                j1--;
+            }
+        }
+
+        public void NextPermutation2(int[] nums)
         {
             if (nums.Length == 1) return;
             int i = -1;
