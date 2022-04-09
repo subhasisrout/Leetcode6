@@ -1,12 +1,21 @@
-﻿namespace Leetcode
+﻿using Leetcode6;
+
+namespace Leetcode
 {
     class Program
     {
         static void Main(string[] args)
         {
+            CarPooling1094 carPooling1094 = new CarPooling1094();
+            var x = carPooling1094.CarPooling(new int[][]
+            {
+                new int[] { 3,2,7},
+                new int[] { 8,3,9},
+                new int[] { 3,7,9}
+            }, 11);
 
-            GroupAnagramsLC49 groupAnagramsLC49 = new GroupAnagramsLC49();
-            var tmp = groupAnagramsLC49.GroupAnagrams(new string[] { "bdddddddddd", "bbbbbbbbbbc" });
+            //GroupAnagramsLC49 groupAnagramsLC49 = new GroupAnagramsLC49();
+            //var tmp = groupAnagramsLC49.GroupAnagrams(new string[] { "bdddddddddd", "bbbbbbbbbbc" });
 
             //LongestHappyStringLC1405 longestHappyStringLC1405 = new LongestHappyStringLC1405();
             //Console.WriteLine(longestHappyStringLC1405.LongestDiverseString(1, 1, 7));
