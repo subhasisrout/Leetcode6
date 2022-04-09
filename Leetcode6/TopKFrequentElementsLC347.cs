@@ -67,5 +67,29 @@ namespace Leetcode
             arr[index1] = arr[index2];
             arr[index2] = tmp;
         }
+
+        // #PriorityQueue #MinHeap based solution. Short and Sweet.
+        public int[] TopKFrequent2(int[] nums, int k)
+        {
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (map.ContainsKey(nums[i]))
+                    map[nums[i]] = map[nums[i]] + 1;
+                else
+                    map.Add(nums[i], 1);
+            }
+            PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>(); // Default comparer - MinHeap.
+            foreach (var kv in map)
+            {
+                minHeap.Enqueue(kv.Key, kv.Value); // Second argument is 'Priority'
+                if (minHeap.Count > k)
+                    minHeap.Dequeue();
+            }
+            int[] result = new int[k];
+            for (int i = 0; i < k; i++)
+                result[i] = minHeap.Dequeue();
+            return result;
+        }
     }
 }

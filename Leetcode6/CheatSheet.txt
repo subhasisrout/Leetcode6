@@ -132,6 +132,9 @@ Cheatsheet
 		a. ReorganizeStringLC767
 		b. LongestHappyStringLC1405
 
+12. Trie
+	WordDictionaryLC211
+
 
 
 
