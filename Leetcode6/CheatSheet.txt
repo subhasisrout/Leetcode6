@@ -97,6 +97,9 @@ Cheatsheet
                 graph[curr[1]].Add(curr[0]);  // for bidirectional graph
             }
 
+	FindEventualSafeStatesLC802 - Above boilerplate is not needed here. Do DFS, Use SAFE/UNSAFE pattern, Assume a node is UNSAFE (this prevents cycle). 
+								  Only mark SAFE once all neighbours are traversed. Everytime you return, Also update the map, as it is used in the BASE CASE.
+
 
 
 8. Cyclic sort - if the range of numbers is fixed between [0..n] or [1..n], just use this. Write in pen and paper for each iteration.
