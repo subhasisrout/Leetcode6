@@ -6,13 +6,65 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            CarPooling1094 carPooling1094 = new CarPooling1094();
-            var x = carPooling1094.CarPooling(new int[][]
-            {
-                new int[] { 3,2,7},
-                new int[] { 8,3,9},
-                new int[] { 3,7,9}
-            }, 11);
+            BadgeUsageDeliveroo badgeUsageDeliveroo = new BadgeUsageDeliveroo();
+            var badgeRecords1 = new string[][] {
+            new string[] {"Martha",   "exit"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Martha",   "enter"},
+            new string[] {"Steve",    "enter"},
+            new string[] {"Martha",   "exit"},
+            new string[] {"Jennifer", "enter"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Curtis",   "exit"},
+            new string[] {"Curtis",   "enter"},
+            new string[] {"Paul",     "exit"},
+            new string[] {"Martha",   "enter"},
+            new string[] {"Martha",   "exit"},
+            new string[] {"Jennifer", "exit"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Martha",   "exit"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Paul",     "enter"},
+            new string[] {"Paul",     "exit"},
+            new string[] {"Paul",     "exit"},
+        };
+            var badgeRecords2 = new string[][] {
+            new string[] {"Paul", "enter"},
+            new string[] {"Paul", "exit"},
+        };
+
+            var badgeRecords3 = new string[][] {
+            new string[] {"Paul", "enter"},
+            new string[] {"Paul", "enter"},
+            new string[] {"Paul", "exit"},
+            new string[] {"Paul", "exit"},
+        };
+
+            var badgeRecords4 = new string[][] {
+            new string[] {"Paul", "enter"},
+            new string[] {"Paul", "exit"},
+            new string[] {"Paul", "exit"},
+            new string[] {"Paul", "enter"},
+        };
+
+            badgeUsageDeliveroo.GetBadgeExitingWithoutEntry(badgeRecords4);
+
+            //PathWithMinimumEffortLC1631 pathWithMinimumEffortLC1631 = new PathWithMinimumEffortLC1631();
+            //pathWithMinimumEffortLC1631.MinimumEffortPath(new int[][]
+            //{
+            //    new int[]{1,2,2 },
+            //    new int[]{3,8,2 },
+            //    new int[]{5,3,5 }
+            //});
+
+            //CarPooling1094 carPooling1094 = new CarPooling1094();
+            //var x = carPooling1094.CarPooling(new int[][]
+            //{
+            //    new int[] { 3,2,7},
+            //    new int[] { 8,3,9},
+            //    new int[] { 3,7,9}
+            //}, 11);
 
             //GroupAnagramsLC49 groupAnagramsLC49 = new GroupAnagramsLC49();
             //var tmp = groupAnagramsLC49.GroupAnagrams(new string[] { "bdddddddddd", "bbbbbbbbbbc" });

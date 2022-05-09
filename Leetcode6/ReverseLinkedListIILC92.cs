@@ -3,6 +3,10 @@
 // Check again if want to revise for picture
 // 3 phase implementation.
 
+//2022-05-03 UPDATE - Leetcode solution seems intuitive.
+//using regular prev,curr,next for reversal and TAIL, CON for maintaining connections before and after reversal
+//always remember after reversal, curr is out-of-the-list/sublist and prev is at the last element of the list/sublist 
+//Because we are using dummyNode, no null check needed at con.next=prev
 
 namespace Leetcode
 {
@@ -10,32 +14,31 @@ namespace Leetcode
     {
         public ListNode ReverseBetween(ListNode head, int left, int right)
         {
-
-            //Phase1 - dummy pointer, move curr to left and leftPrev to just before it
-            ListNode dummy = new ListNode(0);
-            dummy.next = head;
-            ListNode leftPrev = dummy; //store a reference to prev of "original left"
+            ListNode prev = new ListNode(0, head);
             ListNode curr = head;
+            ListNode dummy = prev;
+
+            // reach left node
             for (int i = 0; i < left - 1; i++)
             {
-                leftPrev = curr;
+                prev = curr;
                 curr = curr.next;
             }
 
-            //Phase2 - reverse the subList (Typical LinkedList reversal)
-            ListNode prev = null;
+            ListNode tail = curr;
+            ListNode con = prev;
             for (int i = 0; i < right - left + 1; i++)
             {
-                ListNode tmpNext = curr.next;
+                ListNode tmp = curr.next;
                 curr.next = prev;
                 prev = curr;
-                curr = tmpNext;
+                curr = tmp;
             }
-            //after the above loop (phase 2), curr will point to right of "original right"
 
-            //Phase3 - update pointers
-            leftPrev.next.next = curr;
-            leftPrev.next = prev;
+            //after reversal, now prev points to nth node
+
+            con.next = prev;
+            tail.next = curr;
 
             return dummy.next;
         }

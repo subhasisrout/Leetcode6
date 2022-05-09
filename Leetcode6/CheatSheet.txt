@@ -101,7 +101,7 @@ Cheatsheet
 								  Only mark SAFE once all neighbours are traversed. Everytime you return, Also update the map, as it is used in the BASE CASE.
 
 	Min Cost to connect points LC1584 - Prim's Algorithm - Uses HashSet (for visited) and PriorityQueue (for BFS).
-
+	UnionFind (Union + Find operation). LC1202
 
 8. Cyclic sort - if the range of numbers is fixed between [0..n] or [1..n], just use this. Write in pen and paper for each iteration.
 	This approach be used in variety of places. Examples
@@ -124,7 +124,7 @@ Cheatsheet
 	a. Keep popping until you get an element > or < than the top of stack
 	b. Update result/some kind of array/map.
 	c. Push the element.
-	d. Example - LargestRectangleInHistogramLC84, DailyTemperaturesLC739, NextGreaterElementILC496, LC503, OnlineStockSpan LC901 
+	d. Example - LargestRectangleInHistogramLC84, DailyTemperaturesLC739, NextGreaterElementILC496, LC503, OnlineStockSpan LC901 , ShortestUnsortedContinuousSubarrayLC581
 	e. Note the circular version LC503 uses Pepcoding trick + AE trick 
 	f. This is the only difference in the circular LC503
 		for (int k=(nums.Length * 2) - 1; k>=0; k--) {

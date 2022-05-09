@@ -1,4 +1,5 @@
 ﻿// #Inspired from #AlgoExpert #AE SubArraySort
+// #UPDATE 2022-05-03. Added solution using monotonic stack and 4 forloops method.
 
 namespace Leetcode
 {
@@ -68,6 +69,74 @@ namespace Leetcode
                 }
                 return result[1] - result[0] + 1;
             }
+        }
+
+        //O(n) TIME and O(1) SPACE
+        //4 for loops to find MIN, MAX and correct POSITIONS of MIN,MAX for the unsorted part
+        public int FindUnsortedSubarray2(int[] nums)
+        {
+            int min = Int32.MaxValue;
+            int max = Int32.MinValue;
+            //Get min and max of the unsorted part
+            bool flag = false;
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] < nums[i - 1])
+                    flag = true;
+                if (flag)
+                    min = Math.Min(min, nums[i]);
+            }
+            flag = false;
+            for (int i = nums.Length - 2; i >= 0; i--)
+            {
+                if (nums[i] > nums[i + 1])
+                    flag = true;
+                if (flag)
+                    max = Math.Max(max, nums[i]);
+            }
+
+            //Get the correct pos of min and max
+            int l, r = 0;
+            for (l = 0; l < nums.Length; l++)
+            {
+                if (min < nums[l])
+                    break;
+            }
+            for (r = nums.Length - 1; r >= 0; r--)
+            {
+                if (max > nums[r])
+                    break;
+            }
+
+            //if the array is already sorted, l will reach end and r will reach in the start, so r-l will be negative
+            return r - l < 0 ? 0 : r - l + 1;
+
+        }
+
+        //O(n) TIME and SPACE
+        //#MonotonicStack #Stack
+        public int FindUnsortedSubarray3(int[] nums)
+        {
+            Stack<int> stack = new Stack<int>();
+            int l = nums.Length; //invalid values for l and r
+            int r = -1;//invalid values for l and r
+            for (int i = 0; i < nums.Length; i++)
+            {
+                while (stack.Count > 0 && nums[stack.Peek()] > nums[i])
+                    l = Math.Min(l, stack.Pop());
+                stack.Push(i);
+            }
+
+            stack.Clear();
+            for (int i = nums.Length - 1; i >= 0; i--)
+            {
+                while (stack.Count > 0 && nums[stack.Peek()] < nums[i])
+                    r = Math.Max(r, stack.Pop());
+                stack.Push(i);
+            }
+            // if the array is sorted, r and l will never be updated. r-l will be -1-10 (-11)
+            return r - l < 0 ? 0 : r - l + 1;
+
         }
     }
 }
