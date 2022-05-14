@@ -100,8 +100,9 @@ Cheatsheet
 	FindEventualSafeStatesLC802 - Above boilerplate is not needed here. Do DFS, Use SAFE/UNSAFE pattern, Assume a node is UNSAFE (this prevents cycle). 
 								  Only mark SAFE once all neighbours are traversed. Everytime you return, Also update the map, as it is used in the BASE CASE.
 
-	Min Cost to connect points LC1584 - Prim's Algorithm - Uses HashSet (for visited) and PriorityQueue (for BFS).
-	UnionFind (Union + Find operation). LC1202
+	- Min Cost to connect points LC1584 - Prim's Algorithm - Uses HashSet (for visited) and PriorityQueue (for BFS). #MinimumSpanningTree #MST
+	- UnionFind (Union + Find operation). LC1202
+	- #Dijkstra algorithm in NetworkDelayTime LC743. Uses HashSet (for visited) and PriorityQueue (for BFS and getting the shortest time). Note you add the nei Time + currNode time
 
 8. Cyclic sort - if the range of numbers is fixed between [0..n] or [1..n], just use this. Write in pen and paper for each iteration.
 	This approach be used in variety of places. Examples

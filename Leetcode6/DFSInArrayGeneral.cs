@@ -1,6 +1,6 @@
 ﻿namespace Leetcode
 {
-    public class DFSInArrayGeneral
+    internal class NOTUSEDDFSInArrayGeneral
     {
         public List<List<int>> Subsets(int[] nums)
         {
