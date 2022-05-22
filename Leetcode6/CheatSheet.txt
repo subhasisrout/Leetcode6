@@ -103,6 +103,7 @@ Cheatsheet
 	- Min Cost to connect points LC1584 - Prim's Algorithm - Uses HashSet (for visited) and PriorityQueue (for BFS). #MinimumSpanningTree #MST
 	- UnionFind (Union + Find operation). LC1202
 	- #Dijkstra algorithm in NetworkDelayTime LC743. Uses HashSet (for visited) and PriorityQueue (for BFS and getting the shortest time). Note you add the nei Time + currNode time
+	- #Tarjan's algoeithm - CriticalConnectionsInANetworkLC1192
 
 8. Cyclic sort - if the range of numbers is fixed between [0..n] or [1..n], just use this. Write in pen and paper for each iteration.
 	This approach be used in variety of places. Examples

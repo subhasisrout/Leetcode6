@@ -6,49 +6,24 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            BadgeUsageDeliveroo badgeUsageDeliveroo = new BadgeUsageDeliveroo();
-            var badgeRecords1 = new string[][] {
-            new string[] {"Martha",   "exit"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Martha",   "enter"},
-            new string[] {"Steve",    "enter"},
-            new string[] {"Martha",   "exit"},
-            new string[] {"Jennifer", "enter"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Curtis",   "exit"},
-            new string[] {"Curtis",   "enter"},
-            new string[] {"Paul",     "exit"},
-            new string[] {"Martha",   "enter"},
-            new string[] {"Martha",   "exit"},
-            new string[] {"Jennifer", "exit"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Martha",   "exit"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Paul",     "enter"},
-            new string[] {"Paul",     "exit"},
-            new string[] {"Paul",     "exit"},
-        };
-            var badgeRecords2 = new string[][] {
-            new string[] {"Paul", "enter"},
-            new string[] {"Paul", "exit"},
-        };
+            ShortestBridgeLC934 shortestBridgeLC934 = new ShortestBridgeLC934();
+            shortestBridgeLC934.ShortestBridge(new int[][]
+            {
+                new int[]{0,1},
+                new int[]{1,0}
+            });
 
-            var badgeRecords3 = new string[][] {
-            new string[] {"Paul", "enter"},
-            new string[] {"Paul", "enter"},
-            new string[] {"Paul", "exit"},
-            new string[] {"Paul", "exit"},
-        };
-
-            var badgeRecords4 = new string[][] {
-            new string[] {"Paul", "enter"},
-            new string[] {"Paul", "exit"},
-            new string[] {"Paul", "exit"},
-            new string[] {"Paul", "enter"},
-        };
-
-            badgeUsageDeliveroo.GetBadgeExitingWithoutEntry(badgeRecords4);
+            //CriticalConnectionsInANetworkLC1192 criticalConnectionsInANetworkLC1192 = new CriticalConnectionsInANetworkLC1192();
+            //criticalConnectionsInANetworkLC1192.CriticalConnections(5, new List<IList<int>>()
+            //{
+            //    new List<int>() { 1, 0 },
+            //    new List<int>() { 2, 0 },
+            //    new List<int>() { 3, 2 },
+            //    new List<int>() { 4, 2 },
+            //    new List<int>() { 4, 3 },
+            //    new List<int>() { 3, 0 },
+            //    new List<int>() { 4, 0 }
+            //});
 
             //PathWithMinimumEffortLC1631 pathWithMinimumEffortLC1631 = new PathWithMinimumEffortLC1631();
             //pathWithMinimumEffortLC1631.MinimumEffortPath(new int[][]
