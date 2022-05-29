@@ -21,7 +21,7 @@
                     for (int k = 0; k < p.Length; k++)
                     {
                         char c = s[i + k];
-                        sArr[c - 'a'] += 1;
+                        sArr[c - 'a'] += 1; //#dotnetchar (char-'a' is an integer)
                     }
                 }
                 else

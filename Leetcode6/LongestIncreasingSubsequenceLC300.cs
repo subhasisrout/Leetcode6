@@ -1,6 +1,8 @@
 ﻿// #LIS . Note this is longest increasing subsequence. There is another variant which is longest increasing subsequence SUM.
 // #LC1626
 
+// #LIS #LongestIncreasingSubsequence #LISUsingNLogN
+
 namespace Leetcode
 {
     public class LongestIncreasingSubsequenceLC300
@@ -22,6 +24,30 @@ namespace Leetcode
                 }
             }
             return dp.Max();
+        }
+
+        public int LengthOfLISNLogN(int[] nums)
+        {
+            int len = 0;
+            int[] dp = new int[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int l = 0;
+                int r = len;
+                while (l < r)
+                {
+                    int mid = l + (r - l) / 2;
+                    if (dp[mid] < nums[i]) l = mid + 1;
+                    else r = mid;
+
+                }
+                dp[l] = nums[i];
+                if (l == len)
+                    len++;
+            }
+
+            return len;
+
         }
     }
 }

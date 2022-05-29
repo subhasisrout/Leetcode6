@@ -44,7 +44,7 @@ Cheatsheet
 		diff 2 - in the double for loops, you check for obstacle while applying reccurence formula - else set dp[i][j] to 0.
 
 	Knapsack problem
-		0/1 knapsack, where you can pick the item at max, once only - solved using 2d array dp[items.Length+1][capacity+1]
+		0/1 knapsack, where you can pick the item at max, once only - solved using 2d array dp[items.Length+1][capacity+1] OnesandZeroesLC474
 		Unbounded knapsack, where you can pick any item any number of times - solved using 1d array dp[capacity+1].
 			Another variant of unbounded KS- Coin Change 2. LC518
 
