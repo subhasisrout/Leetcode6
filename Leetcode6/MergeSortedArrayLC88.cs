@@ -1,4 +1,4 @@
-﻿// #SlightTwist
+﻿// #SlightTwist #Clever
 // Here you scan from right to left. i.e. Find the larget element and put it in the end.
 // The reason is - we cannot use extra space. nums1 has the capacity for m+n elements.
 

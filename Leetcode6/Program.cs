@@ -6,12 +6,15 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            ShortestBridgeLC934 shortestBridgeLC934 = new ShortestBridgeLC934();
-            shortestBridgeLC934.ShortestBridge(new int[][]
-            {
-                new int[]{0,1},
-                new int[]{1,0}
-            });
+            MinOperationsToReduceXTo0LC1658 minOperationsToReduceXTo0LC1658 = new MinOperationsToReduceXTo0LC1658();
+            minOperationsToReduceXTo0LC1658.MinOperations(new int[] { 8828, 9581, 49, 9818, 9974, 9869, 9991, 10000, 10000, 10000, 9999, 9993, 9904, 8819, 1231, 6309 }, 134365);
+
+            //ShortestBridgeLC934 shortestBridgeLC934 = new ShortestBridgeLC934();
+            //shortestBridgeLC934.ShortestBridge(new int[][]
+            //{
+            //    new int[]{0,1},
+            //    new int[]{1,0}
+            //});
 
             //CriticalConnectionsInANetworkLC1192 criticalConnectionsInANetworkLC1192 = new CriticalConnectionsInANetworkLC1192();
             //criticalConnectionsInANetworkLC1192.CriticalConnections(5, new List<IList<int>>()

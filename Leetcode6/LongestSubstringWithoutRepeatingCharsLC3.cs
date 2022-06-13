@@ -1,5 +1,6 @@
 ﻿// #SlidingWindow pattern
 // #RememberPattern
+// #LC1695 (same/similar)
 
 namespace Leetcode
 {
@@ -65,5 +66,36 @@ namespace Leetcode
         //    }
         //    return result;
         //}
+
+
+        public class MaximumErasureValueLC1695
+        {
+            public int MaximumUniqueSubarray(int[] nums)
+            {
+                int l = 0;
+                int r = 0;
+                int result = 0;
+                int runningSum = 0;
+                HashSet<int> set = new HashSet<int>();
+                while (r < nums.Length)
+                {
+                    if (!set.Contains(nums[r])) //This if block updates r++ and the result
+                    {
+                        set.Add(nums[r]);
+                        runningSum += nums[r];
+                        result = Math.Max(result, runningSum);
+                        r++;
+                    }
+                    else //This blocks removes nums[l], so during next iteration it is added by nums[r]
+                    {
+                        set.Remove(nums[l]);
+                        runningSum -= nums[l];
+                        l++;
+                    }
+                }
+
+                return result;
+            }
+        }
     }
 }
