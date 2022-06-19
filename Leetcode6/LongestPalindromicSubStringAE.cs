@@ -1,4 +1,5 @@
 ﻿//#LC5 #Leetcode Runs in O(n^2)
+//More readable and short solution addded below. Inspired from Leetcode discussions
 
 namespace Leetcode
 {
@@ -56,5 +57,38 @@ namespace Leetcode
                 return currSubStr;
             }
         }
+
+        // More readable and short solution
+        // Inspired from Leetcode discussions
+        public string LongestPalindrome(string s)
+        {
+            int maxLen = 1;
+            int startIdx = 0;
+
+            for (int k = 0; k < s.Length; k++)
+            {
+                ExtendPalindrome(s, k, k);
+                ExtendPalindrome(s, k, k + 1);
+            }
+
+            return s.Substring(startIdx, maxLen);
+
+            void ExtendPalindrome(string s, int i, int j)
+            {
+                while (i >= 0 && j < s.Length && s[i] == s[j])
+                {
+                    i--;
+                    j++;
+                }
+                if (j - i + 1 - 2 > maxLen)
+                {
+                    maxLen = j - i + 1 - 2;
+                    startIdx = i + 1;
+                }
+            }
+        }
     }
+
+
+
 }

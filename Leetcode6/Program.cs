@@ -6,8 +6,11 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            MinOperationsToReduceXTo0LC1658 minOperationsToReduceXTo0LC1658 = new MinOperationsToReduceXTo0LC1658();
-            minOperationsToReduceXTo0LC1658.MinOperations(new int[] { 8828, 9581, 49, 9818, 9974, 9869, 9991, 10000, 10000, 10000, 9999, 9993, 9904, 8819, 1231, 6309 }, 134365);
+            WordFilter wordFilter = new WordFilter(new string[] { "cabaabaaaa", "ccbcababac", "bacaabccba", "bcbbcbacaa", "abcaccbcaa", "accabaccaa", "cabcbbbcca", "ababccabcb", "caccbbcbab", "bccbacbcba" });
+            wordFilter.F("bccbacbcba", "a");
+
+            //MinOperationsToReduceXTo0LC1658 minOperationsToReduceXTo0LC1658 = new MinOperationsToReduceXTo0LC1658();
+            //minOperationsToReduceXTo0LC1658.MinOperations(new int[] { 8828, 9581, 49, 9818, 9974, 9869, 9991, 10000, 10000, 10000, 9999, 9993, 9904, 8819, 1231, 6309 }, 134365);
 
             //ShortestBridgeLC934 shortestBridgeLC934 = new ShortestBridgeLC934();
             //shortestBridgeLC934.ShortestBridge(new int[][]
