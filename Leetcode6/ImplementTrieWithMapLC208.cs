@@ -1,8 +1,13 @@
-﻿// The children can be represented as arrays or Hashtable. This code uses HashTable.
+﻿// #Trie
+// The children can be represented as arrays or Hashtable. This code uses HashTable.
 
 // I like this HashMap approach better
 // Kind of sunken in the mind. Also its more readable and generic. Neetcode did using HashMap.
 // Michael Muinos used arrays.
+
+// Update - 21-Jun-2022 - Array approach has also sunken in.
+// Note - You have to flexible enough to creatively structure TrieNode as per your need. 
+// You will not need IsWord all of the time. Sometimes you can put the height or count of children etc
 
 namespace Leetcode
 {

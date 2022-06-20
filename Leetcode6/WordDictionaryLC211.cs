@@ -1,4 +1,6 @@
-﻿namespace Leetcode6
+﻿// #Trie
+
+namespace Leetcode6
 {
     // Inspired from #Neetcode https://www.youtube.com/watch?v=BTf05gs_8iU
     public class WordDictionaryLC211

@@ -33,84 +33,55 @@ namespace Leetcode6
     }
     public class WordFilter
     {
-        Trie prefixTrie = null;
-        Trie suffixTrie = null;
-
+        TrieNode root = null;
         public WordFilter(string[] words)
         {
-            prefixTrie = new Trie();
-            suffixTrie = new Trie();
+            root = new TrieNode();
 
             for (int i = 0; i < words.Length; i++)
             {
                 string word = words[i];
-                char[] chArr = word.ToCharArray();
-                Array.Reverse(chArr);
-                string reversedWord = new string(chArr);
+                string newWord = word + "{" + word;
 
-                prefixTrie.Insert(word, i);
-                suffixTrie.Insert(reversedWord, i);
+                //apple{apple, pple{apple, ple{apple, le{apple, e{apple
+                for (int j = 0; j < word.Length; j++) //j will be from 0 to 4.
+                {
+                    TrieNode curr = root;
+                    for (int k = j; k < newWord.Length; k++)// 0 to 10, 1 to 10, 2 to 10....so on
+                    {
+                        char c = newWord[k];
+                        if (curr.Children[c - 'a'] == null)
+                            curr.Children[c - 'a'] = new TrieNode();
+                        curr = curr.Children[c - 'a'];
+                        curr.MaxIndex = i;
+                    }
+                }
             }
 
         }
 
         public int F(string prefix, string suffix)
         {
-            var prefixIdx = prefixTrie.StartsWith(prefix);
-
-            char[] chArr = suffix.ToCharArray();
-            Array.Reverse(chArr);
-            string reversedSuffix = new string(chArr);
-
-            var suffixIdx = suffixTrie.StartsWith(reversedSuffix);
-
-            int i = prefixIdx.Count - 1;
-            int j = suffixIdx.Count - 1;
-            while (i >= 0 && j >= 0)
+            string searchWord = suffix + "{" + prefix;
+            TrieNode curr = root;
+            for (int i = 0; i < searchWord.Length; i++)
             {
-                if (prefixIdx[i] == suffixIdx[j])
-                    return prefixIdx[i];
-                else if (prefixIdx[i] > suffixIdx[j])
-                    i--;
-                else
-                    j--;
+                char c = searchWord[i];
+                if (curr.Children[c - 'a'] == null)
+                    return -1;
+                curr = curr.Children[c - 'a'];
             }
-            return -1;
+            return curr.MaxIndex;
         }
-        class Trie
+
+        class TrieNode
         {
-            private Dictionary<char, Trie> Children { get; }
-            private List<int> Indices { get; }
+            public int MaxIndex;
+            public TrieNode[] Children;
 
-            public Trie()
+            public TrieNode()
             {
-                this.Children = new Dictionary<char, Trie>();
-                this.Indices = new List<int>();
-            }
-
-            public void Insert(string word, int index)
-            {
-                Trie curr = this;
-                for (int i = 0; i < word.Length; i++)
-                {
-                    if (!curr.Children.ContainsKey(word[i]))
-                        curr.Children.Add(word[i], new Trie());
-                    curr = curr.Children[word[i]];
-                    curr.Indices.Add(i);
-                }
-            }
-
-            public List<int> StartsWith(string prefix)
-            {
-                Trie curr = this;
-                for (int i = 0; i < prefix.Length; i++)
-                {
-                    if (!curr.Children.ContainsKey(prefix[i]))
-                        return new List<int>();
-                    else
-                        curr = curr.Children[prefix[i]];
-                }
-                return curr.Indices;
+                this.Children = new TrieNode[27];
             }
         }
     }
