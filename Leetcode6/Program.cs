@@ -6,8 +6,17 @@ namespace Leetcode
     {
         static void Main(string[] args)
         {
-            WordFilter wordFilter = new WordFilter(new string[] { "cabaabaaaa", "ccbcababac", "bacaabccba", "bcbbcbacaa", "abcaccbcaa", "accabaccaa", "cabcbbbcca", "ababccabcb", "caccbbcbab", "bccbacbcba" });
-            wordFilter.F("bccbacbcba", "a");
+            IList<string> files = new List<string>();
+            files.Add("apps/components/batch/index.html");
+            files.Add("apps/components/language/index.html");
+            files.Add("logs/abc/1.txt");
+            files.Add("apps/runtime/system/abc.jar");
+            files.Add("logs/xyz/2.txt");
+            GoogleQ2 googleQ2 = new GoogleQ2();
+            googleQ2.CreateTrieFromListOfFiles(files);
+
+            //WordFilter wordFilter = new WordFilter(new string[] { "cabaabaaaa", "ccbcababac", "bacaabccba", "bcbbcbacaa", "abcaccbcaa", "accabaccaa", "cabcbbbcca", "ababccabcb", "caccbbcbab", "bccbacbcba" });
+            //wordFilter.F("bccbacbcba", "a");
 
             //MinOperationsToReduceXTo0LC1658 minOperationsToReduceXTo0LC1658 = new MinOperationsToReduceXTo0LC1658();
             //minOperationsToReduceXTo0LC1658.MinOperations(new int[] { 8828, 9581, 49, 9818, 9974, 9869, 9991, 10000, 10000, 10000, 9999, 9993, 9904, 8819, 1231, 6309 }, 134365);
